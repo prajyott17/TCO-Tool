@@ -8,9 +8,9 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 load_css()
-
+with st.sidebar:
+    st.empty()
 from nav import top_nav
-st.sidebar.markdown("## ⚙️ Inputs")
 currency = top_nav("rental")
 st.markdown("""
 <style>
