@@ -160,7 +160,6 @@ df = st.session_state.fuel_df
 # ================= MACHINE =================
 machine_col = [c for c in df.columns if "discrip" in c.lower()][0]
 
-# ================= SIDEBAR =================
 # ================= INPUTS =================
 
 st.markdown("## ⚙️ Inputs")

@@ -877,20 +877,3 @@ section[data-testid="stSidebar"] {
     border-right:
         1px solid #e2e8f0;
 }
-/* ===== FORCE SIDEBAR WIDTH ===== */
-
-section[data-testid="stSidebar"] {
-
-    min-width: 320px !important;
-
-    max-width: 320px !important;
-
-    display: block !important;
-}
-
-/* prevent content overlap */
-
-.main .block-container {
-
-    padding-left: 2rem !important;
-}
