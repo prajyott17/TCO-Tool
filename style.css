@@ -11,13 +11,10 @@ header[data-testid="stHeader"] {
 
 /* ================= MAIN CONTAINER ================= */
 [data-testid="stAppViewContainer"] .block-container {
-    max-width: 1180px;
-    margin: 0 auto !important;
+
     padding: 10px 20px 40px 20px !important;
+
     background: transparent !important;
-    border: none !important;
-    border-radius: 0px !important;
-    box-shadow: none !important;
 }
 /* ===== PAGE SECTIONS ===== */
 
