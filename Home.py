@@ -27,14 +27,25 @@ st.markdown("""
 <style>
 
 /* ===== APP BACKGROUND ===== */
-
 .stApp{
 
     background:
+        radial-gradient(
+            circle at top left,
+            rgba(37,99,235,0.08),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at top right,
+            rgba(6,182,212,0.08),
+            transparent 28%
+        ),
+
         linear-gradient(
             180deg,
-            #f5f7fb 0%,
-            #eef3ff 100%
+            #f8fbff 0%,
+            #eef4ff 100%
         );
 }
 
@@ -175,12 +186,22 @@ header{
 
     overflow:hidden;
 
-    padding:26px;
+    padding:28px;
 
-    border-radius:22px;
+    border-radius:24px;
 
     background:
-        rgba(255,255,255,0.78);
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.88),
+            rgba(248,250,252,0.92)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.65);
+
+    box-shadow:
+        0 12px 34px rgba(15,23,42,0.08);
 
     backdrop-filter:blur(14px);
 
@@ -307,17 +328,21 @@ header{
     position:relative;
     z-index:2;
 
-    display:inline-block;
+    display:inline-flex;
 
-    padding:10px 18px;
+    align-items:center;
 
-    border-radius:12px;
+    gap:8px;
+
+    padding:11px 18px;
+
+    border-radius:14px;
 
     background:
         linear-gradient(
             135deg,
             #2563eb,
-            #1d4ed8
+            #1e40af
         );
 
     color:white !important;
@@ -326,12 +351,12 @@ header{
 
     font-size:13px;
 
-    font-weight:650;
+    font-weight:700;
 
     box-shadow:
-        0 8px 20px rgba(37,99,235,0.16);
+        0 10px 24px rgba(37,99,235,0.22);
 
-    transition:all 0.2s ease;
+    transition:all 0.25s ease;
 }
 
 .btn:hover{
@@ -342,7 +367,11 @@ header{
     box-shadow:
         0 14px 28px rgba(37,99,235,0.20);
 }
+.card:hover::after{
 
+    background:
+        rgba(37,99,235,0.18);
+}
 /* ===== FOOTER ===== */
 
 .footer{
@@ -367,6 +396,18 @@ header{
 Enterprise Analytics Platform
 </div>
 
+<div class="hero-title">
+Smart <span>TCO & Rental</span><br>
+Analytics Platform
+</div>
+
+<div class="hero-sub">
+Centralized platform for lifecycle cost analysis,
+rental profitability evaluation,
+maintenance intelligence,
+and operational optimization.
+</div>
+
 </div>
 
 <div class="section-title">
@@ -382,7 +423,7 @@ Lifecycle Analytics
 </div>
 
 <div class="title">
-TCO Genuine vs Non-Genuine Parts
+📊 TCO Genuine vs Non-Genuine Parts
 </div>
 
 <div class="desc">
@@ -404,7 +445,7 @@ Rental Intelligence
 </div>
 
 <div class="title">
-Rental Calculator
+⛽ Rental Calculator
 </div>
 
 <div class="desc">
