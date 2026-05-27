@@ -1,14 +1,3 @@
-/* ===== HIDE SIDEBAR ===== */
-
-section[data-testid="stSidebar"]{
-    display:none !important;
-}
-
-/* hide expand button */
-
-[data-testid="stSidebarCollapsedControl"]{
-    display:none !important;
-}
 header[data-testid="stHeader"] {
     height: 0px !important;
     visibility: hidden;
