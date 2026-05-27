@@ -16,6 +16,12 @@ from reportlab.lib.pagesizes import letter
 
 from io import BytesIO
 from utils import get_rate
+
+rates = get_rate()
+
+st.set_page_config(page_title="TCO Genuine", layout="wide")
+from utils import load_css
+load_css()
 st.markdown("""
 <style>
 
@@ -29,11 +35,6 @@ section[data-testid="stSidebar"]{
 
 </style>
 """, unsafe_allow_html=True)
-rates = get_rate()
-
-st.set_page_config(page_title="TCO Genuine", layout="wide")
-from utils import load_css
-load_css()
 from nav import top_nav
 try:
     currency = top_nav("tco_genuine")
