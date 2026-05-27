@@ -10,22 +10,12 @@ st.set_page_config(
 load_css()
 
 from nav import top_nav
+st.sidebar.markdown("## ⚙️ Inputs")
 currency = top_nav("rental")
 st.markdown("""
 <style>
 
 /* ===== RENTAL DASHBOARD LAYOUT ===== */
-
-.main .block-container{
-
-    max-width: 100% !important;
-
-    padding-top: 1rem !important;
-
-    padding-left: 2rem !important;
-
-    padding-right: 2rem !important;
-}
 
 /* ===== SIDEBAR ===== */
 
