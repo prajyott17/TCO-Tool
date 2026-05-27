@@ -14,52 +14,116 @@ st.markdown("""
 
 <style>
 
-.stApp{
-    background:
-        radial-gradient(circle at top left,
-        #172554 0%,
-        #0b1120 45%);
+/* ================= PAGE ================= */
 
-    color:white;
+.stApp{
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8fbff 0%,
+            #eef4ff 100%
+        );
 }
 
-/* MAIN */
+/* Main width */
 
 .main-wrap{
+
     max-width:1180px;
+
     margin:auto;
-    padding-top:30px;
+
+    padding-top:0px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
+.hero{
+
+    margin-top:10px;
+
+    margin-bottom:42px;
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:
+        rgba(37,99,235,0.08);
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:650;
+
+    margin-bottom:22px;
+}
 
 .hero-title{
 
-    font-size:56px;
+    font-size:64px;
 
-    font-weight:800;
+    font-weight:850;
 
-    letter-spacing:-2px;
+    letter-spacing:-2.5px;
 
-    color:white;
+    line-height:1.02;
 
-    margin-bottom:12px;
+    color:#0f172a;
+
+    margin-bottom:20px;
+}
+
+.hero-title span{
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
 }
 
 .hero-sub{
 
+    max-width:760px;
+
     font-size:18px;
 
-    color:#94a3b8;
+    line-height:1.9;
 
-    max-width:720px;
-
-    line-height:1.8;
-
-    margin-bottom:60px;
+    color:#64748b;
 }
 
-/* TOOL GRID */
+/* ================= SECTION ================= */
+
+.section-title{
+
+    font-size:28px;
+
+    font-weight:760;
+
+    color:#0f172a;
+
+    margin-bottom:24px;
+}
+
+/* ================= GRID ================= */
 
 .grid{
 
@@ -70,44 +134,59 @@ st.markdown("""
     gap:24px;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 
 .card{
 
     position:relative;
 
-    padding:32px;
+    overflow:hidden;
 
-    border-radius:28px;
+    padding:28px;
+
+    min-height:250px;
+
+    border-radius:22px;
 
     background:
-        rgba(15,23,42,0.65);
+        rgba(255,255,255,0.75);
 
-    backdrop-filter:blur(18px);
-
-    border:
-        1px solid rgba(255,255,255,0.08);
-
-    transition:0.25s ease;
-
-    overflow:hidden;
-}
-
-.card:hover{
-
-    transform:
-        translateY(-6px);
+    backdrop-filter:blur(16px);
 
     border:
-        1px solid rgba(59,130,246,0.45);
+        1px solid rgba(255,255,255,0.45);
 
     box-shadow:
-        0 0 40px rgba(37,99,235,0.18);
+        0 12px 30px rgba(15,23,42,0.06);
+
+    transition:all 0.25s ease;
 }
 
-/* GLOW */
+/* Top Accent */
 
 .card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #06b6d4
+        );
+}
+
+/* Glow */
+
+.card::after{
 
     content:"";
 
@@ -116,105 +195,141 @@ st.markdown("""
     width:180px;
     height:180px;
 
-    background:
-        rgba(37,99,235,0.18);
-
     border-radius:50%;
 
-    top:-80px;
-    right:-80px;
+    background:
+        rgba(37,99,235,0.10);
 
-    filter:blur(40px);
+    top:-70px;
+    right:-70px;
+
+    filter:blur(30px);
 }
 
-/* SMALL LABEL */
+.card:hover{
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 24px 50px rgba(37,99,235,0.12);
+}
+
+/* ================= SMALL LABEL ================= */
 
 .label{
 
+    position:relative;
+    z-index:2;
+
     font-size:12px;
 
-    color:#60a5fa;
-
-    text-transform:uppercase;
+    font-weight:700;
 
     letter-spacing:2px;
 
-    margin-bottom:18px;
+    text-transform:uppercase;
 
-    position:relative;
-    z-index:2;
+    color:#3b82f6;
+
+    margin-bottom:20px;
 }
 
-/* TITLE */
+/* ================= TITLE ================= */
 
 .title{
 
-    font-size:30px;
-
-    font-weight:750;
-
-    color:white;
-
-    margin-bottom:16px;
-
     position:relative;
     z-index:2;
+
+    font-size:34px;
+
+    font-weight:780;
+
+    line-height:1.15;
+
+    color:#0f172a;
+
+    margin-bottom:16px;
 }
 
-/* DESC */
+/* ================= DESC ================= */
 
 .desc{
 
-    color:#94a3b8;
-
-    line-height:1.8;
+    position:relative;
+    z-index:2;
 
     font-size:15px;
 
+    line-height:1.9;
+
+    color:#64748b;
+
+    max-width:470px;
+
     margin-bottom:28px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
 
     position:relative;
     z-index:2;
-}
-
-/* BUTTON */
-
-.btn{
 
     display:inline-flex;
 
     align-items:center;
 
+    gap:8px;
+
     padding:12px 22px;
 
     border-radius:14px;
 
-    background:#2563eb;
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
 
     color:white !important;
 
     text-decoration:none;
 
-    font-weight:650;
-
     font-size:14px;
 
-    position:relative;
-    z-index:2;
+    font-weight:700;
+
+    box-shadow:
+        0 10px 24px rgba(37,99,235,0.18);
+
+    transition:all 0.2s ease;
 }
 
 .btn:hover{
 
-    background:#3b82f6;
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 16px 34px rgba(37,99,235,0.26);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 .footer{
 
-    margin-top:70px;
+    margin-top:60px;
 
-    color:#64748b;
+    padding-top:18px;
+
+    border-top:
+        1px solid rgba(148,163,184,0.18);
+
+    color:#94a3b8;
 
     font-size:13px;
 }
@@ -223,16 +338,39 @@ st.markdown("""
 
 <div class="main-wrap">
 
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="hero-badge">
+⚡ Enterprise Analytics Platform
+</div>
+
 <div class="hero-title">
-TCO Intelligence Platform
+TCO <span>Intelligence</span> Platform
 </div>
 
 <div class="hero-sub">
-Operational analytics platform for lifecycle cost optimization,
-maintenance intelligence, rental evaluation, and compressor ownership analysis.
+
+Advanced lifecycle cost analytics platform for compressor operations,
+maintenance optimization, downtime intelligence,
+and rental profitability analysis.
+
 </div>
 
+</div>
+
+<!-- SECTION -->
+
+<div class="section-title">
+Available Tools
+</div>
+
+<!-- GRID -->
+
 <div class="grid">
+
+<!-- CARD 1 -->
 
 <div class="card">
 
@@ -245,16 +383,20 @@ TCO Genuine vs Non-Genuine
 </div>
 
 <div class="desc">
-Analyze operational cost exposure across fuel consumption,
-maintenance quality, downtime, overhaul cycles,
-and replacement frequency.
+
+Analyze lifecycle ownership cost, downtime exposure,
+maintenance quality, overhaul impact,
+and operational efficiency.
+
 </div>
 
 <a class="btn" href="?page=tco_genuine" target="_self">
-Open Tool
+Open Tool →
 </a>
 
 </div>
+
+<!-- CARD 2 -->
 
 <div class="card">
 
@@ -267,18 +409,22 @@ Rental Calculator
 </div>
 
 <div class="desc">
-Evaluate profitability, utilization efficiency,
-ownership recovery, and operating economics
-across varying machine conditions.
+
+Evaluate rental profitability, utilization efficiency,
+operating cost exposure,
+and ownership recovery analysis.
+
 </div>
 
 <a class="btn" href="?page=rental" target="_self">
-Open Tool
+Open Tool →
 </a>
 
 </div>
 
 </div>
+
+<!-- FOOTER -->
 
 <div class="footer">
 Chicago Pneumatic • Internal Business Platform
