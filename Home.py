@@ -79,7 +79,7 @@ header{
 
     margin-top:10px;
 
-    margin-bottom:18px;
+    margin-bottom:12px;
 }
 
 .badge{
