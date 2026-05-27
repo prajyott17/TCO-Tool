@@ -185,17 +185,17 @@ c1.markdown("Initial Investment (Machine Cost)")
 
 price_g = c2.number_input(
     "price_g",
-    value=int(price_val),   # from Excel
+    value=int(price_val),
     step=10000,
-    key="price_g",
+    key=f"price_g_{machine1}",
     label_visibility="collapsed"
 )
 
 price_ng = c3.number_input(
     "price_ng",
-    value=int(price_val),   # from Excel
+    value=int(price_val),
     step=10000,
-    key="price_ng",
+    key=f"price_ng_{machine1}",
     label_visibility="collapsed"
 )
 
