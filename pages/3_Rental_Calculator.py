@@ -1,11 +1,14 @@
 import streamlit as st
 import pandas as pd
 from utils import load_css
+
 st.set_page_config(
+    page_title="Rental",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 load_css()
+
 from nav import top_nav
 currency = top_nav("rental")
 st.markdown("""
