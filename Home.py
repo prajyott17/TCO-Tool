@@ -91,9 +91,9 @@ header{
     border-radius:999px;
 
     background:
-        rgba(37,99,235,0.10);
+        rgba(216,75,75,0.10);
 
-    color:#2563eb;
+    color:#d84b4b;
 
     font-size:12px;
 
@@ -104,7 +104,7 @@ header{
 
 .hero-title{
 
-    font-size:26px;
+    font-size:34px;
 
     font-weight:800;
 
@@ -117,7 +117,7 @@ header{
 
 .hero-title span{
 
-    color:#2563eb;
+    color:#d84b4b;
 
     -webkit-text-fill-color:unset;
 
@@ -141,7 +141,7 @@ header{
 
 .section-title{
 
-    font-size:24px;
+    font-size:20px;
 
     font-weight:750;
 
@@ -190,6 +190,9 @@ header{
         0 10px 30px rgba(15,23,42,0.06);
 
     transition:all 0.25s ease;
+            
+    border-top:
+        3px solid rgba(216,75,75,0.18);
 }
 
 
@@ -208,7 +211,7 @@ header{
     border-radius:50%;
 
     background:
-        rgba(59,130,246,0.10);
+        rgba(216,75,75,0.08);
 
     top:-50px;
     right:-50px;
@@ -222,7 +225,7 @@ header{
         translateY(-4px);
 
     box-shadow:
-        0 18px 40px rgba(37,99,235,0.12);
+        0 16px 32px rgba(216,75,75,0.10);
 }
 
 /* ===== LABEL ===== */
@@ -240,7 +243,7 @@ header{
 
     text-transform:uppercase;
 
-    color:#3b82f6;
+    color:#d84b4b;
 
     margin-bottom:14px;
 }
@@ -252,7 +255,7 @@ header{
     position:relative;
     z-index:2;
 
-    font-size:25px;
+    font-size:22px;
 
     font-weight:760;
 
@@ -296,7 +299,7 @@ header{
 
     border-radius:14px;
 
-    background:#2563eb;
+    background:#d84b4b;
 
     color:white !important;
 
@@ -307,12 +310,13 @@ header{
     font-weight:700;
 
     box-shadow:
-        0 10px 24px rgba(37,99,235,0.22);
+        0 8px 18px rgba(216,75,75,0.18);
 
     transition:all 0.25s ease;
 }
 
 .btn:hover{
+    background:#c43d3d;        
 
     transform:
         translateY(-2px);
