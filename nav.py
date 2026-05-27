@@ -1,7 +1,5 @@
 import streamlit as st
 from utils import get_rate
-
-st.set_page_config(layout="wide")
 from utils import load_css
 from PIL import Image
 
