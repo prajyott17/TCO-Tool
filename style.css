@@ -877,3 +877,55 @@ section[data-testid="stSidebar"] {
     border-right:
         1px solid #e2e8f0;
 }
+/* ================= INPUT CONTAINER ================= */
+
+.input-container {
+
+    background: rgba(255,255,255,0.85);
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 4px 14px rgba(15,23,42,0.05);
+}
+
+/* LABELS */
+
+label, div[data-testid="stWidgetLabel"] {
+
+    font-size: 14px !important;
+
+    font-weight: 600 !important;
+
+    color: #334155 !important;
+}
+
+/* INPUT HEIGHT */
+
+div[data-testid="stNumberInput"] input,
+div[data-testid="stSelectbox"] > div {
+
+    height: 42px !important;
+
+    border-radius: 10px !important;
+}
+
+/* SLIDER */
+
+.stSlider {
+
+    padding-top: 10px;
+}
+
+/* INPUT GAP */
+
+[data-testid="column"] {
+
+    padding: 0 0.5rem;
+}

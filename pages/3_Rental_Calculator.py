@@ -161,8 +161,11 @@ df = st.session_state.fuel_df
 machine_col = [c for c in df.columns if "discrip" in c.lower()][0]
 
 # ================= INPUTS =================
-
-st.markdown("## ⚙️ Inputs")
+st.markdown("""
+<div class="input-container">
+<h2>⚙️ Inputs</h2>
+</div>
+""", unsafe_allow_html=True)
 
 c1, c2 = st.columns(2)
 c3, c4 = st.columns(2)
