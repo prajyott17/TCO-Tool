@@ -92,12 +92,17 @@ def top_nav(current_page):
 # ===== Show dropdown for TCO + TCO Genuine =====
     if current_page in ["tco", "tco_genuine", "rental"]:
         with col2:
+            if "global_currency" not in st.session_state:
+                st.session_state.global_currency = "INR (₹)"
+
             currency = st.selectbox(
-            "Currency",
-            ["INR (₹)", "USD ($)", "EURO (€)"],
-            key=f"currency_{current_page}", 
-            label_visibility="collapsed"
-        )
+                "Currency",
+                ["INR (₹)", "USD ($)", "EURO (€)"],
+
+                key="global_currency",
+
+                label_visibility="collapsed"
+            )
         with col3:
             st.markdown(
                 f"""
