@@ -252,7 +252,7 @@ header{
     position:relative;
     z-index:2;
 
-    font-size:28px;
+    font-size:25px;
 
     font-weight:760;
 
