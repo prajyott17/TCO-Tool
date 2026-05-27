@@ -415,17 +415,17 @@ div[data-testid="stCaptionContainer"] p {
 /* Genuine */
 
 .compare-pill.genuine {
-    background:#f3f4f6;
-    color:#1f2937;
-    border:1px solid #d1d5db;
+    background:#fef2f2;
+    color:#c43d3d;
+    border:1px solid #fecaca;
 }
 
 /* NG */
 
 .compare-pill.ng {
-    background:#fef2f2;
-    color:#c43d3d;
-    border:1px solid #fecaca;
+    background:#f3f4f6;
+    color:#1f2937;
+    border:1px solid #d1d5db;
 }
 
 /* Customer */
