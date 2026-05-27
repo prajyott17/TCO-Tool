@@ -11,16 +11,22 @@ load_css()
 st.markdown("""
 <style>
 
-/* FULL PAGE WIDTH */
+/* FULL WIDTH */
 .block-container {
     max-width: 100% !important;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-top: 1rem;
 }
 
-/* remove extra top spacing */
-.block-container {
-    padding-top: 1rem;
+/* Better Inputs Layout */
+[data-testid="column"] {
+    padding: 0 0.3rem;
+}
+
+/* Card Background */
+.metric-card {
+    background: white;
 }
 
 </style>
@@ -159,7 +165,8 @@ machine_col = [c for c in df.columns if "discrip" in c.lower()][0]
 
 st.markdown("## ⚙️ Inputs")
 
-c1, c2, c3, c4 = st.columns(4)
+c1, c2 = st.columns(2)
+c3, c4 = st.columns(2)
 
 # ===== Machine =====
 with c1:
