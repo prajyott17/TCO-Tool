@@ -8,29 +8,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 load_css()
-st.markdown("""
-<style>
 
-/* FULL WIDTH */
-.block-container {
-    max-width: 100% !important;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
-}
-
-/* Better Inputs Layout */
-[data-testid="column"] {
-    padding: 0 0.3rem;
-}
-
-/* Card Background */
-.metric-card {
-    background: white;
-}
-
-</style>
-""", unsafe_allow_html=True)
 from nav import top_nav
 currency = top_nav("rental")
 
@@ -159,33 +137,25 @@ df = st.session_state.fuel_df
 
 # ================= MACHINE =================
 machine_col = [c for c in df.columns if "discrip" in c.lower()][0]
+left_panel, right_panel = st.columns([1, 3])
+with left_panel:
 
-# ================= INPUTS =================
-st.markdown("""
-<div class="input-container">
-<h2>⚙️ Inputs</h2>
-</div>
-""", unsafe_allow_html=True)
-
-c1, c2, c3, c4 = st.columns(4)
-
-# ===== Machine =====
-with c1:
+    st.markdown("""
+    <div class="page-card">
+    <h3 style='text-align:center;'>⚙️ Inputs</h3>
+    """, unsafe_allow_html=True)
 
     machine = st.selectbox(
         "Machine",
         df[machine_col].dropna().unique()
     )
 
-selected_data = df[df[machine_col] == machine].iloc[0]
+    selected_data = df[df[machine_col] == machine].iloc[0]
 
-price = safe_float(selected_data.iloc[2])
-rental_default = safe_float(selected_data.iloc[3])
-pm_750 = safe_float(selected_data.iloc[10])
-pm_1500 = safe_float(selected_data.iloc[16])
-
-# ===== Quantity =====
-with c2:
+    price = safe_float(selected_data.iloc[2])
+    rental_default = safe_float(selected_data.iloc[3])
+    pm_750 = safe_float(selected_data.iloc[10])
+    pm_1500 = safe_float(selected_data.iloc[16])
 
     qty = st.number_input(
         "No. of Machines",
@@ -194,18 +164,12 @@ with c2:
         1
     )
 
-# ===== Usage =====
-with c3:
-
     hours = st.slider(
         "Hours",
         0,
         600,
         100
     )
-
-# ===== Months =====
-with c4:
 
     months = st.slider(
         "Months",
@@ -214,22 +178,12 @@ with c4:
         6
     )
 
-# ===== SECOND ROW =====
-
-c1, c2, c3 = st.columns(3)
-
-# Rental
-with c1:
-
     monthly_rent = st.number_input(
         f"Monthly Rental ({symbol})",
         min_value=0,
         value=int(rental_default),
         step=1000
     )
-
-# Fuel Consumption
-with c2:
 
     fuel_consumption = st.number_input(
         "Fuel Consumption (L/hr)",
@@ -238,9 +192,6 @@ with c2:
         10
     )
 
-# Fuel Price
-with c3:
-
     fuel_price = st.number_input(
         f"Fuel Price ({symbol}/L)",
         50,
@@ -248,8 +199,7 @@ with c3:
         90
     )
 
-st.divider()
-
+    st.markdown("</div>", unsafe_allow_html=True)
 # ================= CALCULATIONS =================
 # Investment
 investment = price * qty
@@ -284,146 +234,146 @@ else:
 # Final
 final_cost = adjusted_fuel - maintenance
 total_savings = fuel_saving + maintenance
-
+with right_panel:
 # ================= UI =================
 
-st.markdown("""
-<div style='display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;'>
+    st.markdown("""
+    <div style='display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;'>
 
-<div style='font-size:27px; font-weight:700;'>
-⛽ Rental for Diesel Machine
-</div>
-</div>
-""", unsafe_allow_html=True)
+    <div style='font-size:27px; font-weight:700;'>
+    ⛽ Rental for Diesel Machine
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-st.markdown("""
-        <div style='font-size: 15px; color: #6c757d; font-weight:500; margin-bottom:10px;'>
-        Estimate savings using genuine parts and maintenance kits
-        </div>
-        """, unsafe_allow_html=True)
-# Investment
-st.markdown('<div class="section-title">💰 Investment</div>', unsafe_allow_html=True)
-c1, c2 = st.columns(2)
+    st.markdown("""
+            <div style='font-size: 15px; color: #6c757d; font-weight:500; margin-bottom:10px;'>
+            Estimate savings using genuine parts and maintenance kits
+            </div>
+            """, unsafe_allow_html=True)
+    # Investment
+    st.markdown('<div class="section-title">💰 Investment</div>', unsafe_allow_html=True)
+    c1, c2 = st.columns(2)
 
-c1.markdown(f"<div class='metric-card'><div>New Machine Price</div><div class='big-number'>{symbol} {price * rate:,.0f}</div></div>", unsafe_allow_html=True)
-c2.markdown(f"<div class='metric-card'><div>Total Price</div><div class='big-number'>{symbol} {investment * rate:,.0f}</div></div>", unsafe_allow_html=True)
-st.divider()
+    c1.markdown(f"<div class='metric-card'><div>New Machine Price</div><div class='big-number'>{symbol} {price * rate:,.0f}</div></div>", unsafe_allow_html=True)
+    c2.markdown(f"<div class='metric-card'><div>Total Price</div><div class='big-number'>{symbol} {investment * rate:,.0f}</div></div>", unsafe_allow_html=True)
+    st.divider()
 
-# Earnings
-st.markdown('<div class="section-title">📈 Earnings</div>', unsafe_allow_html=True)
-c1, c2, c3, c4 = st.columns(4)
+    # Earnings
+    st.markdown('<div class="section-title">📈 Earnings</div>', unsafe_allow_html=True)
+    c1, c2, c3, c4 = st.columns(4)
 
-# Monthly Rental (keep this)
-c1.markdown(f"""
-<div class='metric-card'>
-<div>Monthly Rental</div>
-<div class='big-number'>{symbol} {monthly_rent * rate:,.0f}</div>
-</div>
-""", unsafe_allow_html=True)
+    # Monthly Rental (keep this)
+    c1.markdown(f"""
+    <div class='metric-card'>
+    <div>Monthly Rental</div>
+    <div class='big-number'>{symbol} {monthly_rent * rate:,.0f}</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-# Total Rental
-c2.markdown(f"""
-<div class='metric-card'>
-<div>Total Rental ({months} months)</div>
-<div class='big-number'>{symbol} {total_rent * rate:,.0f}</div>
-</div>
-""", unsafe_allow_html=True)
+    # Total Rental
+    c2.markdown(f"""
+    <div class='metric-card'>
+    <div>Total Rental ({months} months)</div>
+    <div class='big-number'>{symbol} {total_rent * rate:,.0f}</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-# ROI for selected duration
-c3.markdown(f"""
-<div class='metric-card'>
-<div>ROI ({months} months)</div>
-<div class='big-number'>{roi_actual:.2f}%</div>
-</div>
-""", unsafe_allow_html=True)
+    # ROI for selected duration
+    c3.markdown(f"""
+    <div class='metric-card'>
+    <div>ROI ({months} months)</div>
+    <div class='big-number'>{roi_actual:.2f}%</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-# Annual ROI
-c4.markdown(f"""
-<div class='metric-card'>
-<div>Annual ROI</div>
-<div class='big-number'>{roi_annual:.2f}%</div>
-</div>
-""", unsafe_allow_html=True)
-st.markdown(f"""
-<div style='font-size:18px; font-weight:500; margin-top:10px; color:#28a745;'>
-💰 You earn <b>{symbol} {total_rent * rate:,.0f}</b> in {months} months
-</div>
-""", unsafe_allow_html=True)
-st.markdown(f"""
-<div class='metric-card'>
-Payback Period<br>
-<div class='highlight-number'>{payback_months} months</div>
-</div>
-""", unsafe_allow_html=True)
-if payback_months <= months:
-    st.markdown(
-    "<div style='color:#28a745; font-weight:500;'>💰 Investment can be recovered within selected duration</div>",
-    unsafe_allow_html=True
-)
-else:
-    st.info("⏳ Full recovery needs more rental months")
+    # Annual ROI
+    c4.markdown(f"""
+    <div class='metric-card'>
+    <div>Annual ROI</div>
+    <div class='big-number'>{roi_annual:.2f}%</div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown(f"""
+    <div style='font-size:18px; font-weight:500; margin-top:10px; color:#28a745;'>
+    💰 You earn <b>{symbol} {total_rent * rate:,.0f}</b> in {months} months
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown(f"""
+    <div class='metric-card'>
+    Payback Period<br>
+    <div class='highlight-number'>{payback_months} months</div>
+    </div>
+    """, unsafe_allow_html=True)
+    if payback_months <= months:
+        st.markdown(
+        "<div style='color:#28a745; font-weight:500;'>💰 Investment can be recovered within selected duration</div>",
+        unsafe_allow_html=True
+    )
+    else:
+        st.info("⏳ Full recovery needs more rental months")
 
-st.divider()
+    st.divider()
 
-# Operating Cost
-st.markdown('<div class="section-title">⚙️ Operating Cost</div>', unsafe_allow_html=True)
-c1, c2, c3 = st.columns(3)
+    # Operating Cost
+    st.markdown('<div class="section-title">⚙️ Operating Cost</div>', unsafe_allow_html=True)
+    c1, c2, c3 = st.columns(3)
 
-c1.markdown(f"<div class='metric-card'><div>Monthly Fuel Cost</div><div class='big-number'>{symbol} {monthly_fuel * rate:,.0f}</div></div>", unsafe_allow_html=True)
-c2.markdown(f"<div class='metric-card'><div>Total Fuel Cost ({months} months)</div><div class='big-number'>{symbol} {total_fuel * rate:,.0f}</div></div>", unsafe_allow_html=True)
-c3.markdown(f"<div class='metric-card'><div>Fuel Saving using Genuine Parts(7%)</div><div class='big-number'>{symbol} {fuel_saving * rate:,.0f}</div></div>", unsafe_allow_html=True)
+    c1.markdown(f"<div class='metric-card'><div>Monthly Fuel Cost</div><div class='big-number'>{symbol} {monthly_fuel * rate:,.0f}</div></div>", unsafe_allow_html=True)
+    c2.markdown(f"<div class='metric-card'><div>Total Fuel Cost ({months} months)</div><div class='big-number'>{symbol} {total_fuel * rate:,.0f}</div></div>", unsafe_allow_html=True)
+    c3.markdown(f"<div class='metric-card'><div>Fuel Saving using Genuine Parts(7%)</div><div class='big-number'>{symbol} {fuel_saving * rate:,.0f}</div></div>", unsafe_allow_html=True)
 
-# Adjusted Fuel
-st.markdown(f"""
-<div class='metric-card'>
-<div>Fuel Cost After Savings</div>
-<div class='big-number'>{symbol} {adjusted_fuel * rate:,.0f}</div>
-</div>
-""", unsafe_allow_html=True)
-# ================= PROGRESS BAR =================
-st.markdown("##### 📊 Maintenance Savings Progress")
+    # Adjusted Fuel
+    st.markdown(f"""
+    <div class='metric-card'>
+    <div>Fuel Cost After Savings</div>
+    <div class='big-number'>{symbol} {adjusted_fuel * rate:,.0f}</div>
+    </div>
+    """, unsafe_allow_html=True)
+    # ================= PROGRESS BAR =================
+    st.markdown("##### 📊 Maintenance Savings Progress")
 
-progress_value = min(total_hours / 1500, 1.0)
-st.progress(progress_value)
+    progress_value = min(total_hours / 1500, 1.0)
+    st.progress(progress_value)
 
-if total_hours < 750:
-    st.caption("You are close to unlocking maintenance savings (750 hours kit)")
-elif total_hours < 1500:
-    st.caption("750 hours kit savings active • Higher savings ahead at 1500 hours")
-else:
-    st.caption("Full maintenance savings unlocked")
+    if total_hours < 750:
+        st.caption("You are close to unlocking maintenance savings (750 hours kit)")
+    elif total_hours < 1500:
+        st.caption("750 hours kit savings active • Higher savings ahead at 1500 hours")
+    else:
+        st.caption("Full maintenance savings unlocked")
 
-# Maintenance
-st.markdown('<div class="section-title">🛠️ Maintenance Savings</div>', unsafe_allow_html=True)
+    # Maintenance
+    st.markdown('<div class="section-title">🛠️ Maintenance Savings</div>', unsafe_allow_html=True)
 
-if maintenance == 0:
-    st.info(msg)
-else:
-    st.markdown(f"<div class='metric-card'><div>{msg}</div><div class='big-number'>{symbol} {maintenance * rate:,.0f}</div></div>", unsafe_allow_html=True)
-c1, c2 = st.columns(2)
-# Final Cost
-c1.markdown(f"""
-<div class='metric-card'>
-<div>Final Cost After Savings</div>
-<div class='big-number'>{symbol} {final_cost * rate:,.0f}</div>
-</div>
-""", unsafe_allow_html=True)
+    if maintenance == 0:
+        st.info(msg)
+    else:
+        st.markdown(f"<div class='metric-card'><div>{msg}</div><div class='big-number'>{symbol} {maintenance * rate:,.0f}</div></div>", unsafe_allow_html=True)
+    c1, c2 = st.columns(2)
+    # Final Cost
+    c1.markdown(f"""
+    <div class='metric-card'>
+    <div>Final Cost After Savings</div>
+    <div class='big-number'>{symbol} {final_cost * rate:,.0f}</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-# Total Savings
-c2.markdown(f"""
-<div class='metric-card'>
-<b>Total Savings</b><br>
-<div class='highlight-number'>{symbol} {total_savings * rate:,.0f}</div>
-</div>
-""", unsafe_allow_html=True)
-st.divider()
-# Comparison
-st.markdown("##### 📊 Cost Comparison")
+    # Total Savings
+    c2.markdown(f"""
+    <div class='metric-card'>
+    <b>Total Savings</b><br>
+    <div class='highlight-number'>{symbol} {total_savings * rate:,.0f}</div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.divider()
+    # Comparison
+    st.markdown("##### 📊 Cost Comparison")
 
-c1, c2 = st.columns(2)
-c1.metric("Without Genuine Parts", f"{symbol} {total_fuel * rate:,.0f}")
-c2.metric("With Genuine Parts", f"{symbol} {final_cost * rate:,.0f}")
+    c1, c2 = st.columns(2)
+    c1.metric("Without Genuine Parts", f"{symbol} {total_fuel * rate:,.0f}")
+    c2.metric("With Genuine Parts", f"{symbol} {final_cost * rate:,.0f}")
 
-# Footer
-st.caption("Estimated savings based on usage and genuine parts performance.")
-st.success("💡 Higher usage unlocks greater savings through fuel efficiency and maintenance benefits.")
+    # Footer
+    st.caption("Estimated savings based on usage and genuine parts performance.")
+    st.success("💡 Higher usage unlocks greater savings through fuel efficiency and maintenance benefits.")
