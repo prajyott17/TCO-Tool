@@ -111,7 +111,7 @@ def top_nav(current_page):
     </style>
     """, unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([7,2,1])
+    col1, col2, col3 = st.columns([5,2,1])
 
     # ===== Tabs =====
     with col1:
