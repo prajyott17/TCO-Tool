@@ -8,6 +8,23 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 load_css()
+st.markdown("""
+<style>
+
+/* FULL PAGE WIDTH */
+.block-container {
+    max-width: 100% !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* remove extra top spacing */
+.block-container {
+    padding-top: 1rem;
+}
+
+</style>
+""", unsafe_allow_html=True)
 from nav import top_nav
 currency = top_nav("rental")
 
