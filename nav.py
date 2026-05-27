@@ -36,40 +36,80 @@ def top_nav(current_page):
 
     st.markdown("""
     <style>
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 10px;
+
+    .nav-container{
+
+        display:flex;
+
+        align-items:center;
+
+        border-bottom:
+            1px solid #dbe2ea;
+
+        margin-top:5px;
+
+        margin-bottom:22px;
+
+        padding-bottom:10px;
     }
 
-    .tabs {
-        display: flex;
-        gap: 6px;
+    .tabs{
+
+        display:flex;
+
+        gap:10px;
     }
 
-    .tab {
-        padding: 6px 16px;
-        font-size: 14px;
-        background: #eaeaea;
-        border: 1px solid #ddd;
-        border-bottom: none;
-        border-radius: 8px 8px 0 0;
-        text-decoration: none;
-        color: black;
+    .tab{
+
+        padding:10px 18px;
+
+        border-radius:12px;
+
+        text-decoration:none;
+
+        font-size:14px;
+
+        font-weight:600;
+
+        color:#475569;
+
+        transition:0.2s ease;
+
+        background:
+            rgba(255,255,255,0.55);
+
+        border:
+            1px solid rgba(203,213,225,0.55);
     }
 
-    .tab.active {
-        background: white;
-        font-weight: 600;
-        border-bottom: 1px solid white;
-        margin-bottom: -1px;
+    .tab:hover{
+
+        background:white;
+
+        color:#2563eb;
+
+        box-shadow:
+            0 4px 12px rgba(37,99,235,0.08);
     }
 
-    .tab:hover {
-        background: #f5f5f5;
+    .tab.active{
+
+        background:
+            linear-gradient(
+                135deg,
+                #2563eb,
+                #1d4ed8
+            );
+
+        color:white;
+
+        border:none;
+
+        box-shadow:
+            0 8px 18px rgba(37,99,235,0.18);
     }
+
     </style>
     """, unsafe_allow_html=True)
 
