@@ -161,36 +161,64 @@ df = st.session_state.fuel_df
 machine_col = [c for c in df.columns if "discrip" in c.lower()][0]
 
 # ================= SIDEBAR =================
-with st.sidebar:
+# ================= INPUTS =================
 
-    st.markdown("### ⚙️ Inputs")
+st.markdown("## ⚙️ Inputs")
 
-    # ===== Machine =====
+c1, c2, c3, c4 = st.columns(4)
+
+# ===== Machine =====
+with c1:
+
     machine = st.selectbox(
         "Machine",
         df[machine_col].dropna().unique()
     )
 
-    selected_data = df[df[machine_col] == machine].iloc[0]
+selected_data = df[df[machine_col] == machine].iloc[0]
 
-    price = safe_float(selected_data.iloc[2])
-    rental_default = safe_float(selected_data.iloc[3])
-    pm_750 = safe_float(selected_data.iloc[10])
-    pm_1500 = safe_float(selected_data.iloc[16])
+price = safe_float(selected_data.iloc[2])
+rental_default = safe_float(selected_data.iloc[3])
+pm_750 = safe_float(selected_data.iloc[10])
+pm_1500 = safe_float(selected_data.iloc[16])
 
-    # ===== Quantity =====
-    qty = st.number_input("No. of Machines", 1, 100, 1)
+# ===== Quantity =====
+with c2:
 
-    # ===== Usage =====
-    st.markdown("##### ⏱️ Usage")
+    qty = st.number_input(
+        "No. of Machines",
+        1,
+        100,
+        1
+    )
 
-    col1, col2 = st.columns(2)
-    with col1:
-        hours = st.slider("Hours", 0, 600, 100)
-    with col2:
-        months = st.slider("Months", 1, 12, 6)
+# ===== Usage =====
+with c3:
 
-    # ===== Rental =====
+    hours = st.slider(
+        "Hours",
+        0,
+        600,
+        100
+    )
+
+# ===== Months =====
+with c4:
+
+    months = st.slider(
+        "Months",
+        1,
+        12,
+        6
+    )
+
+# ===== SECOND ROW =====
+
+c1, c2, c3 = st.columns(3)
+
+# Rental
+with c1:
+
     monthly_rent = st.number_input(
         f"Monthly Rental ({symbol})",
         min_value=0,
@@ -198,14 +226,27 @@ with st.sidebar:
         step=1000
     )
 
-    # ===== Fuel =====
-    st.markdown("##### ⛽ Fuel")
+# Fuel Consumption
+with c2:
 
-    col1, col2 = st.columns(2)
-    with col1:
-        fuel_consumption = st.number_input("L/hr", 1, 50, 10)
-    with col2:
-        fuel_price = st.number_input(f"{symbol}/L", 50, 150, 90)
+    fuel_consumption = st.number_input(
+        "Fuel Consumption (L/hr)",
+        1,
+        50,
+        10
+    )
+
+# Fuel Price
+with c3:
+
+    fuel_price = st.number_input(
+        f"Fuel Price ({symbol}/L)",
+        50,
+        150,
+        90
+    )
+
+st.divider()
 
 # ================= CALCULATIONS =================
 # Investment
