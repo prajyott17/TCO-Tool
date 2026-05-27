@@ -5,7 +5,7 @@ from utils import load_css
 st.set_page_config(
     page_title="Rental",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 load_css()
 from nav import top_nav
