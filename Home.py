@@ -156,19 +156,6 @@ st.markdown("""
 
 <div class="main-container">
 
-<div class="hero">
-
-<div class="hero-title">
-Total Cost of Ownership Platform
-</div>
-
-<div class="hero-subtitle">
-Operational intelligence platform for lifecycle cost analysis,
-maintenance optimization, rental evaluation, and machine performance benchmarking.
-</div>
-
-</div>
-
 <div class="section-title">
 Available Tools
 </div>
