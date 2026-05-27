@@ -355,16 +355,6 @@ header{
 Enterprise Analytics Platform
 </div>
 
-<div class="hero-title">
-TCO <span>Intelligence</span> Platform
-</div>
-
-<div class="hero-sub">
-Operational analytics platform for lifecycle cost optimization,
-maintenance intelligence, rental evaluation,
-and compressor ownership analysis.
-</div>
-
 </div>
 
 <div class="section-title">
