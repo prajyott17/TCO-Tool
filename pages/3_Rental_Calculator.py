@@ -10,12 +10,30 @@ load_css()
 st.markdown("""
 <style>
 
+/* SHOW SIDEBAR AGAIN */
+
 section[data-testid="stSidebar"]{
     display:block !important;
+    min-width:260px !important;
 }
+
+/* SHOW COLLAPSE BUTTON */
 
 [data-testid="stSidebarCollapsedControl"]{
     display:flex !important;
+}
+
+/* RESTORE SIDEBAR CONTENT */
+
+section[data-testid="stSidebar"] > div{
+    display:flex !important;
+}
+
+/* ADD BACKGROUND */
+
+section[data-testid="stSidebar"]{
+    background:#ffffff !important;
+    border-right:1px solid #e2e8f0;
 }
 
 </style>
