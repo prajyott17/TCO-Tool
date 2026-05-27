@@ -183,15 +183,26 @@ c1, c2, c3, c4 = st.columns(COLS)
 
 c1.markdown("Initial Investment (Machine Cost)")
 
-price_g = int(price_val)
-price_ng = int(price_val)
-price_c = 0
+price_g = c2.number_input(
+    "price_g",
+    value=int(price_val),   # from Excel
+    step=10000,
+    key="price_g",
+    label_visibility="collapsed"
+)
 
-c2.markdown(f"{symbol} {price_g * rate:,.0f}")
-c3.markdown(f"{symbol} {price_ng * rate:,.0f}")
+price_ng = c3.number_input(
+    "price_ng",
+    value=int(price_val),   # from Excel
+    step=10000,
+    key="price_ng",
+    label_visibility="collapsed"
+)
+
 price_c = c4.number_input(
     "price_c",
     value=0,
+    step=10000,
     key="price_c",
     label_visibility="collapsed"
 )
