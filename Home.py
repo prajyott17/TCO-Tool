@@ -14,116 +14,109 @@ st.markdown("""
 
 <style>
 
-/* ================= PAGE ================= */
+/* ===== FULL PAGE ===== */
 
 .stApp{
 
     background:
         linear-gradient(
             180deg,
-            #f8fbff 0%,
-            #eef4ff 100%
+            #0b1120 0%,
+            #111827 100%
         );
 }
 
-/* Main width */
+/* remove white block */
 
-.main-wrap{
+[data-testid="stAppViewContainer"]{
+
+    background:transparent;
+}
+
+.main .block-container{
 
     max-width:1180px;
 
-    margin:auto;
+    padding-top:20px;
 
-    padding-top:0px;
+    padding-bottom:40px;
 }
 
-/* ================= HERO ================= */
+/* ===== HERO ===== */
 
 .hero{
 
     margin-top:10px;
 
-    margin-bottom:42px;
+    margin-bottom:38px;
 }
 
 .hero-badge{
 
-    display:inline-flex;
+    display:inline-block;
 
-    align-items:center;
-
-    gap:8px;
-
-    padding:8px 16px;
+    padding:7px 14px;
 
     border-radius:999px;
 
     background:
-        rgba(37,99,235,0.08);
+        rgba(59,130,246,0.12);
 
-    color:#2563eb;
+    border:
+        1px solid rgba(59,130,246,0.20);
 
-    font-size:13px;
+    color:#60a5fa;
 
-    font-weight:650;
+    font-size:12px;
 
-    margin-bottom:22px;
+    font-weight:600;
+
+    margin-bottom:18px;
 }
 
 .hero-title{
 
-    font-size:64px;
+    font-size:42px;
 
-    font-weight:850;
+    font-weight:780;
 
-    letter-spacing:-2.5px;
+    letter-spacing:-1px;
 
-    line-height:1.02;
+    color:white;
 
-    color:#0f172a;
-
-    margin-bottom:20px;
+    margin-bottom:14px;
 }
 
 .hero-title span{
 
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #06b6d4
-        );
-
-    -webkit-background-clip:text;
-
-    -webkit-text-fill-color:transparent;
+    color:#3b82f6;
 }
 
 .hero-sub{
 
-    max-width:760px;
+    max-width:720px;
 
-    font-size:18px;
+    font-size:15px;
 
     line-height:1.9;
 
-    color:#64748b;
+    color:#94a3b8;
 }
 
-/* ================= SECTION ================= */
+/* ===== SECTION ===== */
 
 .section-title{
 
-    font-size:28px;
+    font-size:22px;
 
-    font-weight:760;
+    font-weight:700;
 
-    color:#0f172a;
+    color:white;
 
-    margin-bottom:24px;
+    margin-bottom:20px;
 }
 
-/* ================= GRID ================= */
+/* ===== GRID ===== */
 
 .grid{
 
@@ -131,38 +124,33 @@ st.markdown("""
 
     grid-template-columns:1fr 1fr;
 
-    gap:24px;
+    gap:22px;
 }
 
-/* ================= CARD ================= */
+/* ===== CARD ===== */
 
 .card{
 
     position:relative;
 
-    overflow:hidden;
+    padding:24px;
 
-    padding:28px;
-
-    min-height:250px;
-
-    border-radius:22px;
+    border-radius:18px;
 
     background:
-        rgba(255,255,255,0.75);
+        rgba(17,24,39,0.75);
 
-    backdrop-filter:blur(16px);
+    backdrop-filter:blur(12px);
 
     border:
-        1px solid rgba(255,255,255,0.45);
+        1px solid rgba(255,255,255,0.06);
 
-    box-shadow:
-        0 12px 30px rgba(15,23,42,0.06);
+    transition:0.25s ease;
 
-    transition:all 0.25s ease;
+    overflow:hidden;
 }
 
-/* Top Accent */
+/* glow */
 
 .card::before{
 
@@ -170,180 +158,137 @@ st.markdown("""
 
     position:absolute;
 
-    left:0;
-    top:0;
-
-    width:100%;
-    height:5px;
+    width:140px;
+    height:140px;
 
     background:
-        linear-gradient(
-            90deg,
-            #2563eb,
-            #06b6d4
-        );
-}
-
-/* Glow */
-
-.card::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:180px;
-    height:180px;
+        rgba(37,99,235,0.15);
 
     border-radius:50%;
 
-    background:
-        rgba(37,99,235,0.10);
+    top:-60px;
+    right:-60px;
 
-    top:-70px;
-    right:-70px;
-
-    filter:blur(30px);
+    filter:blur(25px);
 }
 
 .card:hover{
 
     transform:
-        translateY(-6px);
+        translateY(-4px);
+
+    border:
+        1px solid rgba(59,130,246,0.25);
 
     box-shadow:
-        0 24px 50px rgba(37,99,235,0.12);
+        0 14px 34px rgba(37,99,235,0.12);
 }
 
-/* ================= SMALL LABEL ================= */
+/* ===== LABEL ===== */
 
 .label{
 
     position:relative;
     z-index:2;
 
-    font-size:12px;
+    font-size:11px;
 
-    font-weight:700;
-
-    letter-spacing:2px;
+    letter-spacing:1.5px;
 
     text-transform:uppercase;
 
-    color:#3b82f6;
+    color:#60a5fa;
 
-    margin-bottom:20px;
+    margin-bottom:14px;
 }
 
-/* ================= TITLE ================= */
+/* ===== TITLE ===== */
 
 .title{
 
     position:relative;
     z-index:2;
 
-    font-size:34px;
+    font-size:26px;
 
-    font-weight:780;
+    font-weight:720;
 
-    line-height:1.15;
+    line-height:1.2;
 
-    color:#0f172a;
+    color:white;
 
-    margin-bottom:16px;
+    margin-bottom:14px;
 }
 
-/* ================= DESC ================= */
+/* ===== DESC ===== */
 
 .desc{
 
     position:relative;
     z-index:2;
 
-    font-size:15px;
+    font-size:14px;
 
-    line-height:1.9;
+    line-height:1.8;
 
-    color:#64748b;
+    color:#9ca3af;
 
-    max-width:470px;
-
-    margin-bottom:28px;
+    margin-bottom:24px;
 }
 
-/* ================= BUTTON ================= */
+/* ===== BUTTON ===== */
 
 .btn{
 
     position:relative;
     z-index:2;
 
-    display:inline-flex;
+    display:inline-block;
 
-    align-items:center;
+    padding:10px 18px;
 
-    gap:8px;
+    border-radius:12px;
 
-    padding:12px 22px;
-
-    border-radius:14px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #1d4ed8
-        );
+    background:#2563eb;
 
     color:white !important;
 
     text-decoration:none;
 
-    font-size:14px;
+    font-size:13px;
 
-    font-weight:700;
+    font-weight:650;
 
-    box-shadow:
-        0 10px 24px rgba(37,99,235,0.18);
-
-    transition:all 0.2s ease;
+    transition:0.2s ease;
 }
 
 .btn:hover{
 
-    transform:
-        translateY(-2px);
-
-    box-shadow:
-        0 16px 34px rgba(37,99,235,0.26);
+    background:#3b82f6;
 }
 
-/* ================= FOOTER ================= */
+/* ===== FOOTER ===== */
 
 .footer{
 
-    margin-top:60px;
+    margin-top:50px;
 
-    padding-top:18px;
+    padding-top:16px;
 
     border-top:
-        1px solid rgba(148,163,184,0.18);
+        1px solid rgba(255,255,255,0.06);
 
-    color:#94a3b8;
+    color:#6b7280;
 
-    font-size:13px;
+    font-size:12px;
 }
 
 </style>
 
-<div class="main-wrap">
-
-<!-- HERO -->
-
 <div class="hero">
 
 <div class="hero-badge">
-⚡ Enterprise Analytics Platform
+Enterprise Analytics Platform
 </div>
 
 <div class="hero-title">
@@ -351,26 +296,18 @@ TCO <span>Intelligence</span> Platform
 </div>
 
 <div class="hero-sub">
-
-Advanced lifecycle cost analytics platform for compressor operations,
-maintenance optimization, downtime intelligence,
-and rental profitability analysis.
-
+Operational analytics platform for lifecycle cost optimization,
+maintenance intelligence, rental evaluation,
+and compressor ownership analysis.
 </div>
 
 </div>
-
-<!-- SECTION -->
 
 <div class="section-title">
 Available Tools
 </div>
 
-<!-- GRID -->
-
 <div class="grid">
-
-<!-- CARD 1 -->
 
 <div class="card">
 
@@ -383,20 +320,16 @@ TCO Genuine vs Non-Genuine
 </div>
 
 <div class="desc">
-
-Analyze lifecycle ownership cost, downtime exposure,
-maintenance quality, overhaul impact,
+Analyze lifecycle ownership cost,
+maintenance quality, downtime exposure,
 and operational efficiency.
-
 </div>
 
 <a class="btn" href="?page=tco_genuine" target="_self">
-Open Tool →
+Open Tool
 </a>
 
 </div>
-
-<!-- CARD 2 -->
 
 <div class="card">
 
@@ -409,27 +342,21 @@ Rental Calculator
 </div>
 
 <div class="desc">
-
-Evaluate rental profitability, utilization efficiency,
-operating cost exposure,
+Evaluate rental profitability,
+utilization efficiency,
 and ownership recovery analysis.
-
 </div>
 
 <a class="btn" href="?page=rental" target="_self">
-Open Tool →
+Open Tool
 </a>
 
 </div>
 
 </div>
 
-<!-- FOOTER -->
-
 <div class="footer">
 Chicago Pneumatic • Internal Business Platform
-</div>
-
 </div>
 
 """, unsafe_allow_html=True)
