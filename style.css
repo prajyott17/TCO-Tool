@@ -1,4 +1,14 @@
+/* ===== HIDE SIDEBAR ===== */
 
+section[data-testid="stSidebar"]{
+    display:none !important;
+}
+
+/* hide expand button */
+
+[data-testid="stSidebarCollapsedControl"]{
+    display:none !important;
+}
 header[data-testid="stHeader"] {
     height: 0px !important;
     visibility: hidden;
@@ -12,17 +22,28 @@ header[data-testid="stHeader"] {
 
 /* ================= MAIN CONTAINER ================= */
 [data-testid="stAppViewContainer"] .block-container {
-    max-width: 980px;
-    margin: 6px auto !important;
-    padding: 12px 18px !important;
-
-    background: #ffffff;
-    border-radius: 10px;
-    border: 1px solid #e6eaf0;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    max-width: 1180px;
+    margin: 0 auto !important;
+    padding: 10px 20px 40px 20px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
 }
+/* ===== PAGE SECTIONS ===== */
 
+.page-card{
+    background:
+        rgba(255,255,255,0.78);
+    backdrop-filter: blur(14px);
+    border:
+        1px solid rgba(255,255,255,0.65);
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow:
+        0 10px 30px rgba(15,23,42,0.05);
+    margin-bottom: 18px;
+}
 
 .element-container {
     margin: 0px !important;
