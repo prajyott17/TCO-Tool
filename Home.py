@@ -324,12 +324,12 @@ header{
         translateY(-2px);
 
     box-shadow:
-        0 14px 28px rgba(37,99,235,0.20);
+        0 12px 24px rgba(216,75,75,0.18);
 }
 .card:hover::after{
 
     background:
-        rgba(37,99,235,0.18);
+        rgba(216,75,75,0.12);
 }
 /* ===== FOOTER ===== */
 
