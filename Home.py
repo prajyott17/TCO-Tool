@@ -104,7 +104,7 @@ header{
 
 .hero-title{
 
-    font-size:32px;
+    font-size:26px;
 
     font-weight:800;
 
