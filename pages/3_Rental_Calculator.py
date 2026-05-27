@@ -1,43 +1,11 @@
 import streamlit as st
 import pandas as pd
-st.set_page_config(page_title="Rental", layout="wide")
 from utils import load_css
 st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
 load_css()
-st.markdown("""
-<style>
-
-/* SHOW SIDEBAR AGAIN */
-
-section[data-testid="stSidebar"]{
-    display:block !important;
-    min-width:260px !important;
-}
-
-/* SHOW COLLAPSE BUTTON */
-
-[data-testid="stSidebarCollapsedControl"]{
-    display:flex !important;
-}
-
-/* RESTORE SIDEBAR CONTENT */
-
-section[data-testid="stSidebar"] > div{
-    display:flex !important;
-}
-
-/* ADD BACKGROUND */
-
-section[data-testid="stSidebar"]{
-    background:#ffffff !important;
-    border-right:1px solid #e2e8f0;
-}
-
-</style>
-""", unsafe_allow_html=True)
 from nav import top_nav
 currency = top_nav("rental")
 # ===== Currency Mapping =====
