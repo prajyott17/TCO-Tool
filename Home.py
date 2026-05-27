@@ -10,105 +10,88 @@ st.set_page_config(
 load_css()
 top_nav("home")
 
-# ================= HERO =================
-
 st.markdown("""
 <style>
 
-.hero-section{
-    padding:40px;
-    border-radius:24px;
+.main-container{
+    max-width:1200px;
+    margin:auto;
+    padding-top:20px;
+}
 
-    background: linear-gradient(
-        135deg,
-        #0f172a 0%,
-        #1e3a8a 45%,
-        #2563eb 100%
-    );
+/* HERO */
 
-    color:white;
-
-    box-shadow:
-        0 10px 30px rgba(37,99,235,0.25);
-
-    margin-bottom:30px;
+.hero{
+    padding:40px 10px 20px 10px;
 }
 
 .hero-title{
     font-size:42px;
-    font-weight:800;
-    line-height:1.1;
+    font-weight:750;
+    color:#0f172a;
     margin-bottom:12px;
 }
 
 .hero-subtitle{
-    font-size:18px;
-    color:#dbeafe;
-    max-width:750px;
+    font-size:17px;
+    color:#475569;
+    max-width:760px;
+    line-height:1.7;
 }
 
-.metric-strip{
-    display:flex;
-    gap:16px;
-    margin-top:28px;
-}
+/* SECTION */
 
-.metric-card{
-    flex:1;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:18px;
-    padding:18px;
-    backdrop-filter: blur(10px);
-}
+.section-title{
+    margin-top:35px;
+    margin-bottom:20px;
 
-.metric-title{
-    font-size:13px;
-    color:#cbd5e1;
-    margin-bottom:6px;
-}
-
-.metric-value{
     font-size:24px;
     font-weight:700;
-}
 
-.tool-title{
-    font-size:28px;
-    font-weight:700;
-    margin-bottom:20px;
     color:#0f172a;
 }
+
+/* TOOL GRID */
 
 .tool-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:22px;
+    gap:24px;
 }
 
+/* CARD */
+
 .tool-card{
-    padding:28px;
-    border-radius:22px;
     background:white;
+
     border:1px solid #e2e8f0;
 
-    box-shadow:
-        0 8px 24px rgba(15,23,42,0.05);
+    border-radius:22px;
 
-    transition: all 0.2s ease;
+    padding:28px;
+
+    transition:all 0.2s ease;
+
+    box-shadow:
+        0 4px 16px rgba(15,23,42,0.04);
 }
 
 .tool-card:hover{
-    transform: translateY(-4px);
+
+    transform:translateY(-3px);
 
     box-shadow:
-        0 18px 40px rgba(15,23,42,0.10);
+        0 14px 30px rgba(15,23,42,0.08);
 }
 
+/* ICON */
+
 .tool-icon{
-    font-size:42px;
-    margin-bottom:14px;
+    font-size:38px;
+    margin-bottom:16px;
 }
+
+/* TITLE */
 
 .tool-name{
     font-size:22px;
@@ -117,120 +100,129 @@ st.markdown("""
     margin-bottom:10px;
 }
 
+/* DESC */
+
 .tool-desc{
     font-size:14px;
-    color:#475569;
-    line-height:1.6;
-    margin-bottom:20px;
+    color:#64748b;
+    line-height:1.7;
+    margin-bottom:22px;
 }
 
-.launch-btn{
+/* BUTTON */
+
+.tool-btn{
+
     display:inline-block;
+
     padding:10px 18px;
+
     border-radius:12px;
 
-    background:linear-gradient(
-        135deg,
-        #2563eb 0%,
-        #1d4ed8 100%
-    );
+    background:#2563eb;
 
     color:white !important;
+
     text-decoration:none;
+
+    font-size:14px;
+
     font-weight:600;
+}
+
+.tool-btn:hover{
+    background:#1d4ed8;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:60px;
+    padding-top:18px;
+
+    border-top:1px solid #e2e8f0;
+
+    font-size:13px;
+
+    color:#94a3b8;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# ================= HERO =================
+# HERO
 
 st.markdown("""
-<div class="hero-section">
+
+<div class="main-container">
+
+<div class="hero">
 
 <div class="hero-title">
-🚀 Total Cost of Ownership Platform
+Total Cost of Ownership Platform
 </div>
 
 <div class="hero-subtitle">
-Advanced operational intelligence platform for compressor lifecycle analysis,
-maintenance optimization, rental evaluation, and cost benchmarking.
-</div>
-
-<div class="metric-strip">
-
-<div class="metric-card">
-<div class="metric-title">Fuel Optimization</div>
-<div class="metric-value">14%</div>
-</div>
-
-<div class="metric-card">
-<div class="metric-title">Downtime Reduction</div>
-<div class="metric-value">35%</div>
-</div>
-
-<div class="metric-card">
-<div class="metric-title">Maintenance Savings</div>
-<div class="metric-value">₹12L+</div>
-</div>
-
-<div class="metric-card">
-<div class="metric-title">Operational Visibility</div>
-<div class="metric-value">100%</div>
+Operational intelligence platform for lifecycle cost analysis,
+maintenance optimization, rental evaluation, and machine performance benchmarking.
 </div>
 
 </div>
 
+<div class="section-title">
+Available Tools
 </div>
-""", unsafe_allow_html=True)
-
-# ================= TOOLS =================
-
-st.markdown(
-    '<div class="tool-title">Available Tools</div>',
-    unsafe_allow_html=True
-)
-
-st.markdown("""
 
 <div class="tool-grid">
 
 <div class="tool-card">
 
-<div class="tool-icon">🛠️</div>
+<div class="tool-icon">
+🛠️
+</div>
 
 <div class="tool-name">
 TCO Genuine vs Non-Genuine
 </div>
 
 <div class="tool-desc">
-Compare lifecycle cost impact of genuine versus non-genuine maintenance
-strategies including fuel, overhaul, downtime, breakdown, and replacement analysis.
+Analyze lifecycle ownership cost across fuel consumption,
+maintenance strategy, overhaul exposure, downtime impact,
+and replacement frequency.
 </div>
 
-<a class="launch-btn" href="?page=tco_genuine" target="_self">
-Launch Tool
+<a class="tool-btn" href="?page=tco_genuine" target="_self">
+Open Tool
 </a>
 
 </div>
 
 <div class="tool-card">
 
-<div class="tool-icon">🏗️</div>
+<div class="tool-icon">
+🏗️
+</div>
 
 <div class="tool-name">
 Rental Calculator
 </div>
 
 <div class="tool-desc">
-Analyze rental economics, utilization efficiency, operating cost exposure,
-and profitability across varying project durations and machine loads.
+Evaluate rental profitability, operating cost,
+utilization efficiency, and ownership recovery across
+different machine operating conditions.
 </div>
 
-<a class="launch-btn" href="?page=rental" target="_self">
-Launch Tool
+<a class="tool-btn" href="?page=rental" target="_self">
+Open Tool
 </a>
 
+</div>
+
+</div>
+
+<div class="footer">
+TCO Analytics Platform • Internal Business Tool
 </div>
 
 </div>
