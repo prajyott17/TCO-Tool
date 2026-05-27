@@ -64,30 +64,11 @@ st.markdown("""
     font-weight: 600;
 }
 
-/* MAIN CONTAINER */
-[data-testid="stAppViewContainer"] .block-container {
-    max-width: 1100px;
-    padding: 14px;              
-    margin-top: 24px;   
-    margin-bottom: 12px;
-    border-radius: 10px;
-}
-
 /* REMOVE EXTRA GAPS */
 .element-container {
     margin-bottom: 4px !important;  
 }
 
-/* SIDEBAR COMPACT */
-section[data-testid="stSidebar"] {
-    width: 240px !important;
-    padding-top: 10px;
-}
-
-/* REMOVE LEFT GAP */
-[data-testid="stAppViewContainer"] .main {
-    margin-left: 0px !important;
-}
             /* ================= CENTER ALIGN UI ================= */
 
 /* section titles */
