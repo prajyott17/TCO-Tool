@@ -9,7 +9,19 @@ st.set_page_config(
 
 load_css()
 top_nav("home")
+st.markdown("""
+<style>
 
+section[data-testid="stSidebar"]{
+    display:none !important;
+}
+
+[data-testid="stSidebarCollapsedControl"]{
+    display:none !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 st.markdown("""
 
 <style>
