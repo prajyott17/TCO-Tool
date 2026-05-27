@@ -30,22 +30,10 @@ st.markdown("""
 .stApp{
 
     background:
-        radial-gradient(
-            circle at top left,
-            rgba(37,99,235,0.08),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at top right,
-            rgba(6,182,212,0.08),
-            transparent 28%
-        ),
-
         linear-gradient(
             180deg,
-            #f8fbff 0%,
-            #eef4ff 100%
+            #f8fafc 0%,
+            #f1f5f9 100%
         );
 }
 
@@ -116,31 +104,26 @@ header{
 
 .hero-title{
 
-    font-size:46px;
+    font-size:32px;
 
     font-weight:800;
 
-    letter-spacing:-1px;
+    line-height:1.15;
 
-    line-height:1.05;
+    max-width:620px;
 
-    color:#0f172a;
-
-    margin-bottom:14px;
+    margin-bottom:16px;
 }
 
 .hero-title span{
 
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #06b6d4
-        );
+    color:#2563eb;
+
+    -webkit-text-fill-color:unset;
+
+    background:none;
 
     -webkit-background-clip:text;
-
-    -webkit-text-fill-color:transparent;
 }
 
 .hero-sub{
@@ -175,7 +158,7 @@ header{
 
     grid-template-columns:1fr 1fr;
 
-    gap:24px;
+    gap:18px;
 }
 
 /* ===== CARDS ===== */
@@ -190,18 +173,13 @@ header{
 
     border-radius:24px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.88),
-            rgba(248,250,252,0.92)
-        );
+    background:#ffffff;
 
     border:
         1px solid rgba(255,255,255,0.65);
 
     box-shadow:
-        0 12px 34px rgba(15,23,42,0.08);
+        0 4px 14px rgba(15,23,42,0.06);
 
     backdrop-filter:blur(14px);
 
@@ -214,27 +192,7 @@ header{
     transition:all 0.25s ease;
 }
 
-/* subtle top glow */
 
-.card::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    top:0;
-
-    width:100%;
-    height:5px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #2563eb,
-            #38bdf8
-        );
-}
 
 /* glow orb */
 
@@ -334,16 +292,11 @@ header{
 
     gap:8px;
 
-    padding:11px 18px;
+    padding:9px 16px;
 
     border-radius:14px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #1e40af
-        );
+    background:#2563eb;
 
     color:white !important;
 
