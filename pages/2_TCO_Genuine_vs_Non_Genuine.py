@@ -16,7 +16,19 @@ from reportlab.lib.pagesizes import letter
 
 from io import BytesIO
 from utils import get_rate
+st.markdown("""
+<style>
 
+section[data-testid="stSidebar"]{
+    display:none !important;
+}
+
+[data-testid="stSidebarCollapsedControl"]{
+    display:none !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 rates = get_rate()
 
 st.set_page_config(page_title="TCO Genuine", layout="wide")
