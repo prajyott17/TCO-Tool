@@ -146,7 +146,7 @@ with left_panel:
 
     st.markdown("""
     <div class="page-card">
-    <h3 style='text-align:center;'>⚙️ Inputs</h3>
+    <h5 style='text-align:center;'>⚙️ Inputs</h5>
     """, unsafe_allow_html=True)
 
     machine = st.selectbox(
