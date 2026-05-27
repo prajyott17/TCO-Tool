@@ -167,7 +167,8 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-c1, c2, c3, c4 = st.columns(4)
+c1, c2 = st.columns(2)
+c3, c4 = st.columns(2)
 
 # ===== Machine =====
 with c1:
