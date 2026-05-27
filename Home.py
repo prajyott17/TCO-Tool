@@ -79,7 +79,7 @@ header{
 
     margin-top:10px;
 
-    margin-bottom:36px;
+    margin-bottom:18px;
 }
 
 .badge{
@@ -145,9 +145,11 @@ header{
 
     font-weight:750;
 
-    color:#0f172a;
+    color:#1f2937;
 
-    margin-bottom:20px;
+    margin-top:0px;
+
+    margin-bottom:14px;
 }
 
 /* ===== GRID ===== */
