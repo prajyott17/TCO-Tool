@@ -862,21 +862,20 @@ div[data-testid="stPlotlyChart"] > div {
 }
 
 .tco-final-value.genuine {
-
-    background:#f3f4f6;
-
-    color:#111827;
-
-    border-color:#d1d5db;
-}
-
-.tco-final-value.ng {
-
     background:#fef2f2;
 
     color:#c43d3d;
 
     border-color:#fecaca;
+    
+}
+
+.tco-final-value.ng {
+    background:#f3f4f6;
+
+    color:#111827;
+
+    border-color:#d1d5db;
 }
 
 .tco-final-value.customer {
