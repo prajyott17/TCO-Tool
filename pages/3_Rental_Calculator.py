@@ -10,28 +10,7 @@ st.set_page_config(
 load_css()
 from nav import top_nav
 currency = top_nav("rental")
-st.markdown("""
-<style>
 
-/* ===== RENTAL DASHBOARD LAYOUT ===== */
-
-/* ===== SIDEBAR ===== */
-
-section[data-testid="stSidebar"]{
-
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #f8fbff 100%
-        );
-
-    border-right:
-        1px solid #e2e8f0;
-}
-
-</style>
-""", unsafe_allow_html=True)
 # ===== Currency Mapping =====
 if currency == "INR (₹)":
     symbol = "₹"
