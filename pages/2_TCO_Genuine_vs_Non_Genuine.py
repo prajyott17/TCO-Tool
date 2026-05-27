@@ -836,8 +836,14 @@ if st.session_state.get("calculated", False):
                 hoverinfo='label+percent+value',
                 marker=dict(colors = [
                         "#000000",
-                        "#4E79A7", "#F28E2B", "#E15759",
-                        "#76B7B2", "#59A14F", "#EDC948"
+                        [
+                        "#1f2937",
+                        "#d84b4b",
+                        "#ef4444",
+                        "#f59e0b",
+                        "#10b981",
+                        "#6b7280"
+                        ]
                         ]),
                 textinfo='none' 
             )])
@@ -912,10 +918,10 @@ if st.session_state.get("calculated", False):
 
             marker=dict(
                 color=[
-                    "#3b82f6",
-                    "#10b981",
-                    "#f59e0b",
-                    "#ef4444"
+                "#d84b4b",
+                "#10b981",
+                "#f59e0b",
+                "#6b7280"
                 ]
             ),
 

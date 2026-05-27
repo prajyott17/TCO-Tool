@@ -299,7 +299,7 @@ with right_panel:
     </div>
     """, unsafe_allow_html=True)
     st.markdown(f"""
-    <div style='font-size:18px; font-weight:500; margin-top:10px; color:#28a745;'>
+    <div style='font-size:18px; font-weight:500; margin-top:10px; color:#d84b4b;'>
     💰 You earn <b>{symbol} {total_rent * rate:,.0f}</b> in {months} months
     </div>
     """, unsafe_allow_html=True)

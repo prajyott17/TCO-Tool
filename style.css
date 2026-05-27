@@ -1,3 +1,21 @@
+:root{
+
+    --brand-red:#d84b4b;
+
+    --brand-red-dark:#c43d3d;
+
+    --brand-red-light:#fdf2f2;
+
+    --brand-charcoal:#1f2937;
+
+    --brand-gray:#6b7280;
+
+    --brand-border:#e5e7eb;
+
+    --brand-bg:#f5f7fa;
+
+    --brand-card:#ffffff;
+}
 header[data-testid="stHeader"] {
     height: 0px !important;
     visibility: hidden;
@@ -5,7 +23,12 @@ header[data-testid="stHeader"] {
 
 /* ================= BACKGROUND ================= */
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #f4f7fb 0%, #f9fbff 100%);
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc 0%,
+            #f3f4f6 100%
+        );
     padding-top: 0px !important;
 }
 
@@ -151,10 +174,11 @@ button[kind="secondary"] {
 
     border-radius: 12px;
 
-    background: linear-gradient(
-        135deg,
-        #98a5b8 0%,
-        #acc2e2 100%
+    background:
+        linear-gradient(
+            135deg,
+            #d84b4b 0%,
+            #c43d3d 100%
     ) !important;
 
     color: white !important;
@@ -182,8 +206,8 @@ button[kind="secondary"]:hover {
 
     background: linear-gradient(
         135deg,
-        #a3beed 0%,
-        #6a7796 100%
+        #de5a5a 0%,
+        #c43d3d 100%,
     ) !important;
 }
 
@@ -390,9 +414,9 @@ div[data-testid="stCaptionContainer"] p {
 
 .compare-pill.genuine {
 
-    background: #dbeafe;
-    color: #1d4ed8;
-    border: 1px solid #bfdbfe;
+    background:#f3f4f6;
+    color:#1f2937;
+    border:1px solid #d1d5db;
 }
 
 /* NG */
@@ -434,7 +458,7 @@ details summary {
     background: #f8fafc !important;
     border-radius: 14px !important;
     transition: all 0.1s ease;
-    border-left: 4px solid #3b82f6 !important;
+    border-left: 4px solid #d84b4b !important;
     padding-left: 12px !important;
 }
 
@@ -531,7 +555,7 @@ details[open] > div {
     );
     border: 1px solid #dbe2ea;
     box-shadow:
-        0 4px 12px rgba(59, 130, 246, 0.08);
+        0 4px 12px rgba(216,75,75,0.10);
 }
 
 .hero-saving-label {
@@ -839,11 +863,11 @@ div[data-testid="stPlotlyChart"] > div {
 
 .tco-final-value.genuine {
 
-    background: #eff6ff;
+    background:#f3f4f6;
 
-    color: #1d4ed8;
+    color:#111827;
 
-    border-color: #bfdbfe;
+    border-color:#d1d5db;
 }
 
 .tco-final-value.ng {
@@ -978,4 +1002,9 @@ div[data-testid="stSelectbox"] > div {
             transparent
         );
     margin: auto;
+}
+.metric-card{
+
+    border-top:
+        3px solid rgba(216,75,75,0.16);
 }

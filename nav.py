@@ -85,10 +85,10 @@ def top_nav(current_page):
 
         background:white;
 
-        color:#2563eb;
+        color:#d84b4b;
 
         box-shadow:
-            0 4px 12px rgba(37,99,235,0.08);
+            0 4px 12px rgba(216,75,75,0.10);
     }
 
     .tab.active{
@@ -96,8 +96,8 @@ def top_nav(current_page):
         background:
             linear-gradient(
                 135deg,
-                #2563eb,
-                #1d4ed8
+                #d84b4b,
+                #c43d3d
             );
 
         color:white;
@@ -105,7 +105,7 @@ def top_nav(current_page):
         border:none;
 
         box-shadow:
-            0 8px 18px rgba(37,99,235,0.18);
+            0 8px 18px rgba(216,75,75,0.18);
     }
 
     </style>
