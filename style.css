@@ -408,12 +408,13 @@ div[data-testid="stCaptionContainer"] p {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 4px;
+    font-weight:700;
+    letter-spacing:0.2px;
 }
 
 /* Genuine */
 
 .compare-pill.genuine {
-
     background:#f3f4f6;
     color:#1f2937;
     border:1px solid #d1d5db;
@@ -422,19 +423,18 @@ div[data-testid="stCaptionContainer"] p {
 /* NG */
 
 .compare-pill.ng {
-
-    background: #fee2e2;
-    color: #dc2626;
-    border: 1px solid #fecaca;
+    background:#fef2f2;
+    color:#c43d3d;
+    border:1px solid #fecaca;
 }
 
 /* Customer */
 
 .compare-pill.customer {
 
-    background: #e2e8f0;
-    color: #475569;
-    border: 1px solid #cbd5e1;
+    background:#f8fafc;
+    color:#6b7280;
+    border:1px solid #dbe2ea;
 }
 /* ================= SECTION EXPANDERS ================= */
 
@@ -872,20 +872,20 @@ div[data-testid="stPlotlyChart"] > div {
 
 .tco-final-value.ng {
 
-    background: #fef2f2;
+    background:#fef2f2;
 
-    color: #dc2626;
+    color:#c43d3d;
 
-    border-color: #fecaca;
+    border-color:#fecaca;
 }
 
 .tco-final-value.customer {
 
-    background: #f8fafc;
+    background:#f8fafc;
 
-    color: #475569;
+    color:#6b7280;
 
-    border-color: #cbd5e1;
+    border-color:#dbe2ea;
 }
 /* SIDEBAR STYLE */
 
