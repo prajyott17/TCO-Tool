@@ -137,7 +137,7 @@ df = st.session_state.fuel_df
 
 # ================= MACHINE =================
 machine_col = [c for c in df.columns if "discrip" in c.lower()][0]
-left_panel, divider, right_panel = st.columns([0.8, 0.03, 3.17])
+left_panel, divider, right_panel = st.columns([0.65, 0.02, 3.33])
 with divider:
     st.markdown("""
     <div class="vertical-divider"></div>
