@@ -6,9 +6,9 @@ from PIL import Image
 load_css()
 
 def top_nav(current_page):
-    header_col1, header_col2 = st.columns([1.2, 6])
+    header_col1, header_col2 = st.columns([2, 5])
 
-    with header_col1:
+    with header_col2:
         st.image("assets/chicago-pneumatic.jpg", width=130)
 
     rates = get_rate()
