@@ -42,7 +42,7 @@ header[data-testid="stHeader"] {
     inset:0;
 
     background-image:
-        url("assets/cp_bg.png");
+        url("CP_BACKGROUND_IMAGE");
 
     background-repeat:no-repeat;
 
@@ -70,6 +70,7 @@ section {
 
     z-index:1;
 }
+
 
 /* ================= MAIN CONTAINER ================= */
 [data-testid="stAppViewContainer"] .block-container {
