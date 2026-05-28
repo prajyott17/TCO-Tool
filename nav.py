@@ -12,14 +12,14 @@ def top_nav(current_page):
 
         st.markdown("""
         <a href="?page=home" target="_self">
-            <img src="assets/chicago-pneumatic.jpg"
-                width="105"
-                style="
-                    border-radius:10px;
-                    cursor:pointer;
-                ">
-        </a>
         """, unsafe_allow_html=True)
+
+        st.image(
+            "assets/chicago-pneumatic.jpg",
+            width=105
+        )
+
+        st.markdown("</a>", unsafe_allow_html=True)
 
     rates = get_rate()
     usd = rates["USD"]
