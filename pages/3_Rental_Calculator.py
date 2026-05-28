@@ -32,7 +32,7 @@ st.markdown("""
 .metric-card {
 
     background:
-        rgba(255,255,255,0.2);
+        rgba(255,255,255,0.01);
 
     border:
         1px solid rgba(203,213,225,0.45);
