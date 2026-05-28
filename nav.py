@@ -8,10 +8,42 @@ load_css()
 def top_nav(current_page):
     header_col1, header_col2 = st.columns([2, 6])
 
+
     with header_col1:
 
+        if st.button(
+            " ",
+            key="home_logo_btn",
+            help="Go to Home"
+        ):
+            st.switch_page("Home.py")
+
         st.markdown("""
-        <a href="?page=home" target="_self">
+        <style>
+
+        div[data-testid="stButton"] button[kind="secondary"] {
+
+            background: transparent !important;
+
+            border: none !important;
+
+            box-shadow: none !important;
+
+            padding: 0 !important;
+
+            margin: 0 !important;
+
+            height: auto !important;
+        }
+
+        div[data-testid="stButton"] button[kind="secondary"]:hover {
+
+            transform: none !important;
+
+            box-shadow: none !important;
+        }
+
+        </style>
         """, unsafe_allow_html=True)
 
         st.image(
@@ -19,7 +51,6 @@ def top_nav(current_page):
             width=105
         )
 
-        st.markdown("</a>", unsafe_allow_html=True)
 
     rates = get_rate()
     usd = rates["USD"]
