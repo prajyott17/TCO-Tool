@@ -6,10 +6,8 @@ from PIL import Image
 load_css()
 
 def top_nav(current_page):
-    header_col1, header_col2 = st.columns([2, 6])
+    header_col1, header_col2 = st.columns([1.2, 6.8])
 
-
-        
     with header_col1:
 
         if st.button(
@@ -49,6 +47,8 @@ def top_nav(current_page):
             "assets/chicago-pneumatic.jpg",
             width=95
         )
+
+
 
     rates = get_rate()
     usd = rates["USD"]
