@@ -28,6 +28,7 @@ elif currency == "EURO (€)":
 st.markdown("""
 <style>
 /* ================= COMPACT CLEAN UI ================= */
+            
 .metric-card {
 
     background:
