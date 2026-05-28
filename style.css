@@ -31,45 +31,6 @@ header[data-testid="stHeader"] {
         );
     padding-top: 0px !important;
 }
-/* ================= GLOBAL BACKGROUND IMAGE ================= */
-
-[data-testid="stAppViewContainer"]::before {
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    background-image:
-        url("CP_BACKGROUND_IMAGE");
-
-    background-repeat:no-repeat;
-
-    background-position:right center;
-
-    background-size:58%;
-
-    opacity:0.035;
-
-    pointer-events:none;
-
-    z-index:0;
-
-    filter:grayscale(100%);
-}
-
-/* KEEP CONTENT ABOVE IMAGE */
-
-.main,
-.block-container,
-header,
-section {
-
-    position:relative;
-
-    z-index:1;
-}
 
 
 /* ================= MAIN CONTAINER ================= */
