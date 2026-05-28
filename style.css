@@ -185,18 +185,83 @@ div[data-testid="stNumberInput"] button {
     color: #94a3b8 !important;
 }
 
-/* ================= DROPDOWN ================= */
+/* ================= GLASS DROPDOWNS ================= */
+
 div[data-testid="stSelectbox"] > div {
-    height: 32px !important;
-    padding: 0px 10px !important;
 
-    border-radius: 6px !important;
-    border: 1px solid #dbe2ea !important;
+    background:
+        rgba(255,255,255,0.38) !important;
 
-    background: #f8fafc !important;
+    backdrop-filter:
+        blur(10px);
 
-    display: flex;
-    align-items: center;
+    border:
+        1px solid rgba(255,255,255,0.30) !important;
+
+    border-radius: 12px !important;
+
+    min-height: 34px !important;
+
+    box-shadow:
+        0 4px 12px rgba(15,23,42,0.04);
+}
+
+/* INNER SELECT */
+
+div[data-testid="stSelectbox"] div[data-baseweb="select"] {
+
+    background: transparent !important;
+}
+
+/* DROPDOWN TEXT */
+
+div[data-testid="stSelectbox"] span {
+
+    color:#111827 !important;
+
+    font-size:13px !important;
+
+    font-weight:500;
+}
+
+/* DROPDOWN MENU */
+
+div[role="listbox"] {
+
+    background:
+        rgba(255,255,255,0.72) !important;
+
+    backdrop-filter:
+        blur(16px);
+
+    border:
+        1px solid rgba(255,255,255,0.30) !important;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 12px 28px rgba(15,23,42,0.10);
+}
+
+/* OPTIONS */
+
+div[role="option"] {
+
+    background: transparent !important;
+
+    color:#111827 !important;
+
+    font-size:13px !important;
+}
+
+/* OPTION HOVER */
+
+div[role="option"]:hover {
+
+    background:
+        rgba(216,75,75,0.10) !important;
+
+    color:#d84b4b !important;
 }
 
 div[data-testid="stSelectbox"] div,
