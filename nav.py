@@ -6,49 +6,10 @@ from PIL import Image
 load_css()
 
 def top_nav(current_page):
-    header_col1, header_col2 = st.columns([1.2, 6.8])
+    header_col1, header_col2 = st.columns([2, 6])
 
     with header_col1:
-
-        if st.button(
-            "🏠",
-            key="home_logo_btn",
-            help="Go to Home"
-        ):
-            st.switch_page("Home.py")
-
-        st.markdown("""
-        <style>
-
-        div[data-testid="stButton"] button {
-
-            background: transparent !important;
-
-            border: none !important;
-
-            box-shadow: none !important;
-
-            padding: 0 !important;
-
-            margin-bottom: -8px !important;
-
-            font-size: 0px !important;
-        }
-
-        div[data-testid="stButton"] button::before {
-
-            content: "";
-        }
-
-        </style>
-        """, unsafe_allow_html=True)
-
-        st.image(
-            "assets/chicago-pneumatic.jpg",
-            width=95
-        )
-
-
+        st.image("assets/chicago-pneumatic.jpg", width=130)
 
     rates = get_rate()
     usd = rates["USD"]
