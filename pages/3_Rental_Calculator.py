@@ -35,7 +35,7 @@ st.markdown("""
         rgba(255,255,255,0.2);
 
     border:
-        1px solid rgba(255,255,255,0.35);
+        1px solid rgba(203,213,225,0.45);
 
     padding: 12px;
 
