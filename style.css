@@ -239,7 +239,7 @@ button[kind="secondary"] {
     letter-spacing: 0.2px;
 
     box-shadow:
-        0 6px 16px rgba(37, 99, 235, 0.18);
+        0 6px 16px rgba(216,75,75, 0.18);
 
     transition: all 0.2s ease;
 }
@@ -249,7 +249,7 @@ button[kind="secondary"]:hover {
     transform: translateY(-1px);
 
     box-shadow:
-        0 10px 20px rgba(37, 99, 235, 0.22);
+        0 10px 20px rgba(216,75,75, 0.22);
 
     background: linear-gradient(
         135deg,

@@ -30,9 +30,32 @@ st.markdown("""
 /* ================= COMPACT CLEAN UI ================= */
 
 .metric-card {
-    padding: 10px;                   
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.06);
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border:
+        1px solid #cbd5e1;
+
+    padding: 12px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 22px rgba(15,23,42,0.10);
+
+    text-align:center;
+
+    transition:0.2s ease;
+}
+
+.metric-card:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(15,23,42,0.12);
 }
 
 .metric-card div:first-child {
