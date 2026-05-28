@@ -46,11 +46,11 @@ header[data-testid="stHeader"] {
 
     background-repeat:no-repeat;
 
-    background-position:right center;
+    background-position:right top;
 
     background-size:58%;
 
-    opacity:25;
+    opacity:0.05;
 
     pointer-events:none;
 
