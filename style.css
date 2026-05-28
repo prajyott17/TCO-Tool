@@ -56,7 +56,7 @@ header[data-testid="stHeader"] {
 
     z-index:0;
 
-    filter:grayscale(100%);
+    filter:grayscale(25%);
 }
 
 /* KEEP CONTENT ABOVE IMAGE */
