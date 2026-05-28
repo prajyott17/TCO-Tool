@@ -713,7 +713,7 @@ div[data-testid="stPlotlyChart"] > div {
     border-radius:20px;
 
     background:
-        rgba(255,255,255,0.97);
+        rgba(255,255,255,0.72);
 
     border:
         1px solid #d1d5db;
@@ -1023,7 +1023,7 @@ div[data-testid="stSelectbox"] > div {
 .page-card {
 
     background:
-        rgba(248,250,252,0.98);
+        rgba(255,255,255,0.68);
 
     backdrop-filter:
         blur(12px);

@@ -31,25 +31,26 @@ st.markdown("""
 .metric-card {
 
     background:
-        rgba(255,255,255,0.82);
+        rgba(255,255,255,0.58);
 
     border:
-        1px solid rgba(203,213,225,0.75);
+        1px solid rgba(255,255,255,0.35);
 
     padding: 12px;
 
     border-radius: 14px;
 
     backdrop-filter:
-        blur(10px);
+        blur(14px);
 
     box-shadow:
-        0 6px 16px rgba(15,23,42,0.06);
+        0 4px 12px rgba(15,23,42,0.04);
 
     text-align:center;
 
     transition:0.2s ease;
 }
+
 .metric-card:hover {
 
     transform:
