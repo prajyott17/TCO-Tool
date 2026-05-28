@@ -10,7 +10,7 @@ def get_rate():
 
 def load_css():
 
-    with open("assets/CPS.jpg", "rb") as image_file:
+    with open("assets/chicago-pneumatic.jpg", "rb") as image_file:
         encoded = base64.b64encode(image_file.read()).decode()
 
     with open("style.css", "r", encoding="utf-8") as f:
