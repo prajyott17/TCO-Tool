@@ -318,17 +318,12 @@ div[data-testid="stMetricValue"] {
     padding: 22px;
     border-radius: 20px;
 
-    background: linear-gradient(
-        135deg,
-        #ffffff 0%,
-        #f8fbff 100%
-    );
+    background: rgba(248,250,252,0.98);
 
-    border: 1px solid #dbe7f3;
+    border: 1px solid #cbd5e1;
 
     box-shadow:
-        0 10px 30px rgba(15, 23, 42, 0.06),
-        0 2px 8px rgba(15, 23, 42, 0.04);
+        0 10px 28px rgba(15,23,42,0.10);
 }
 
 /* ================= KPI CARDS ================= */
@@ -1028,16 +1023,22 @@ div[data-testid="stSelectbox"] > div {
 .page-card {
 
     background:
-        rgba(255,255,255,0.82);
+        rgba(248,250,252,0.98);
+
     backdrop-filter:
         blur(12px);
-    border-radius: 15px;
-    padding: 8px 10px;
+
+    border-radius: 18px;
+
+    padding: 10px 12px;
+
     border:
-        1px solid #e2e8f0;
+        1px solid #cbd5e1;
+
     box-shadow:
-        0 8px 24px rgba(15,23,42,0.05);
+        0 10px 26px rgba(15,23,42,0.10);
 }
+
 /* ================= VERTICAL DIVIDER ================= */
 
 .vertical-divider {
