@@ -32,7 +32,7 @@ st.markdown("""
 .metric-card {
 
     background:
-        rgba(255,255,255,0.40);
+        rgba(255,255,255,0.2);
 
     border:
         1px solid rgba(255,255,255,0.35);
@@ -49,7 +49,7 @@ st.markdown("""
 
     text-align:center;
 
-    transition:0.2s ease;
+    transition:0.1s ease;
 }
 
 .metric-card:hover {
