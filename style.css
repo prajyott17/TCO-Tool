@@ -42,7 +42,7 @@ header[data-testid="stHeader"] {
     inset:0;
 
     background-image:
-        url("app/static/assets/cp_bg.png");
+        url("assets/cp_bg.png");
 
     background-repeat:no-repeat;
 
