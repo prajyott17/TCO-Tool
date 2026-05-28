@@ -9,7 +9,17 @@ def top_nav(current_page):
     header_col1, header_col2 = st.columns([2, 6])
 
     with header_col1:
-        st.image("assets/chicago-pneumatic.jpg", width=130)
+
+        st.markdown("""
+        <a href="?page=home" target="_self">
+            <img src="assets/chicago-pneumatic.jpg"
+                width="105"
+                style="
+                    border-radius:10px;
+                    cursor:pointer;
+                ">
+        </a>
+        """, unsafe_allow_html=True)
 
     rates = get_rate()
     usd = rates["USD"]
