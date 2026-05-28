@@ -9,10 +9,11 @@ def top_nav(current_page):
     header_col1, header_col2 = st.columns([2, 6])
 
 
+        
     with header_col1:
 
         if st.button(
-            " ",
+            "🏠",
             key="home_logo_btn",
             help="Go to Home"
         ):
@@ -21,7 +22,7 @@ def top_nav(current_page):
         st.markdown("""
         <style>
 
-        div[data-testid="stButton"] button[kind="secondary"] {
+        div[data-testid="stButton"] button {
 
             background: transparent !important;
 
@@ -31,16 +32,14 @@ def top_nav(current_page):
 
             padding: 0 !important;
 
-            margin: 0 !important;
+            margin-bottom: -8px !important;
 
-            height: auto !important;
+            font-size: 0px !important;
         }
 
-        div[data-testid="stButton"] button[kind="secondary"]:hover {
+        div[data-testid="stButton"] button::before {
 
-            transform: none !important;
-
-            box-shadow: none !important;
+            content: "";
         }
 
         </style>
@@ -48,9 +47,8 @@ def top_nav(current_page):
 
         st.image(
             "assets/chicago-pneumatic.jpg",
-            width=105
+            width=95
         )
-
 
     rates = get_rate()
     usd = rates["USD"]
