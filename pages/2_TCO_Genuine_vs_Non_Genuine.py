@@ -904,7 +904,7 @@ if st.session_state.get("calculated", False):
         
         st.markdown("##### 📊 Savings Contribution by Category")
 
-        saving_components = ["Fuel", "Overhaul", "Breakdown", "Replacement"]
+        saving_components = ["Fuel", "Major Overhaul", "Breakdown", "Replacement"]
         savings = [fuel_saving, oh_saving, breakdown_saving, replacement_saving]
 
         fig = go.Figure()
