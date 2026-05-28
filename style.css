@@ -46,30 +46,17 @@ header[data-testid="stHeader"] {
 
     background-repeat:no-repeat;
 
-    background-position:center;
+    background-position:right center;
 
-    background-size:cover;
+    background-size:58%;
 
-    opacity:0.06;
+    opacity:0.035;
 
     pointer-events:none;
 
     z-index:0;
 
-    filter:
-        grayscale(100%);
-}
-
-/* KEEP CONTENT ABOVE BG */
-
-.main,
-.block-container,
-header,
-section {
-
-    position:relative;
-
-    z-index:1;
+    filter:grayscale(100%);
 }
 
 /* KEEP CONTENT ABOVE IMAGE */
