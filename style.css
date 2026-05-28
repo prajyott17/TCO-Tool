@@ -996,12 +996,10 @@ div[data-testid="stSelectbox"] > div {
 }
 /* ================= RENTAL INPUT PANEL ================= */
 
-/* ================= RENTAL INPUT PANEL ================= */
-
 div[data-testid="stNumberInput"] input,
 div[data-testid="stSelectbox"] > div {
 
-    height: 30px !important;
+    height: 25px !important;
 
     min-height: 30px !important;
 
