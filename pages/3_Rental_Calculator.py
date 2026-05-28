@@ -28,27 +28,28 @@ elif currency == "EURO (€)":
 st.markdown("""
 <style>
 /* ================= COMPACT CLEAN UI ================= */
-
 .metric-card {
 
     background:
-        rgba(255,255,255,0.96);
+        rgba(255,255,255,0.82);
 
     border:
-        1px solid #cbd5e1;
+        1px solid rgba(203,213,225,0.75);
 
     padding: 12px;
 
     border-radius: 14px;
 
+    backdrop-filter:
+        blur(10px);
+
     box-shadow:
-        0 8px 22px rgba(15,23,42,0.10);
+        0 6px 16px rgba(15,23,42,0.06);
 
     text-align:center;
 
     transition:0.2s ease;
 }
-
 .metric-card:hover {
 
     transform:
