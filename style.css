@@ -140,13 +140,18 @@ div[data-testid="stNumberInput"] input {
 
     border: 1px solid #dbe2ea !important;
 
-    background: #f8fafc !important;
+    background: #ffffff !important;
 
-    color: inherit !important;
+    color: #111827 !important;
 
     font-size: 14px !important;
 
     line-height: 1 !important;
+
+    -webkit-text-fill-color:#111827 !important;
+}
+div[data-testid="stNumberInput"] input::placeholder {
+    color:#64748b !important;
 }
 /* focus */
 div[data-testid="stNumberInput"] input:focus {
@@ -203,7 +208,7 @@ div[data-testid="stSelectbox"] div[data-baseweb="select"] {
 
 div[data-testid="stSelectbox"] span {
 
-    color:inherit !important;
+    color: #111827 !important;
 
     font-size:13px !important;
 
