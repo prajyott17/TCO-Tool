@@ -1061,9 +1061,9 @@ div[data-testid="stSelectbox"] > div {
 
     background:#ffffff;
 
-    font-size:16px;
+    font-size:13px;
 
-    font-weight:400;
+    font-weight:300;
 }
 
 .derived-ng-multiplier {
@@ -1072,7 +1072,7 @@ div[data-testid="stSelectbox"] > div {
 
     font-size:13px;
 
-    font-weight:600;
+    font-weight:400;
 }
 div[data-testid="stProgressBar"] > div > div {
 
