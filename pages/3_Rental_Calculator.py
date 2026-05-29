@@ -66,7 +66,8 @@ st.markdown("""
 .metric-card div:first-child {
     font-size: 13px;             
     margin-bottom: 2px;
-    color: #4b5563;
+    color:inherit;
+    opacity:0.75;
 }
 
 .big-number {
@@ -279,7 +280,7 @@ with right_panel:
     """, unsafe_allow_html=True)
 
     st.markdown("""
-            <div style='font-size: 15px; color: #6c757d; font-weight:500; margin-bottom:10px;'>
+            <div style='font-size:15px; color:inherit; opacity:0.75; font-weight:500; margin-bottom:10px;'>
             Estimate savings using genuine parts and maintenance kits
             </div>
             """, unsafe_allow_html=True)

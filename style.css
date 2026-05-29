@@ -1124,3 +1124,38 @@ div[data-testid="stSelectbox"] > div {
     border-top:
         3px solid rgba(216,75,75,0.16);
 }
+/* ================= DERIVED NG BOX ================= */
+
+.derived-ng-box {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-left:4px solid #d84b4b;
+
+    border-top:1px solid rgba(216,75,75,0.15);
+
+    border-right:1px solid rgba(216,75,75,0.15);
+
+    border-bottom:1px solid rgba(216,75,75,0.15);
+
+    border-radius:6px;
+
+    padding:6px 8px;
+
+    background:rgba(255,255,255,0.02);
+
+    backdrop-filter:blur(4px);
+
+    font-size:14px;
+}
+
+.derived-ng-multiplier {
+
+    font-size:11px;
+
+    color:inherit;
+}

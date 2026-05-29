@@ -24,6 +24,9 @@ from utils import load_css
 load_css()
 st.markdown("""
 <style>
+:root{
+    --text-color: inherit;
+}
 
 section[data-testid="stSidebar"]{
     display:none !important;
@@ -368,18 +371,12 @@ with st.expander("**Fuel Cost**", expanded=False):
 
     c3.markdown(
         f"""
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border:1px solid #dbe2ea;
-            border-radius:6px;
-            padding:6px 8px;
-            background:#f8fafc;
-            font-size:14px;
-        ">
+        <div class="derived-ng-box">
             <span>{round(fc_ng, 2)}</span>
-            <span style="font-size:11px; color:#64748b;">↑{(fc_multiplier - 1)*100:.1f}%</span>
+
+            <span class="derived-ng-multiplier">
+                ↑{(fc_multiplier - 1)*100:.1f}%
+            </span>
         </div>
         """,
         unsafe_allow_html=True
@@ -420,18 +417,11 @@ with st.expander("**Major Overhaul Cost**", expanded=False):
 
     c3.markdown(
         f"""
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border:1px solid #dbe2ea;
-            border-radius:6px;
-            padding:6px 8px;
-            background:#f8fafc;
-            font-size:14px;
-        ">
+        <div class="derived-ng-box">
             <span>{e_ng:,}</span>
-            <span style="font-size:11px; color:#64748b;">×{multiplier}</span>
+            <span class="derived-ng-multiplier">
+                ×{multiplier}
+            </span>
         </div>
         """,
         unsafe_allow_html=True
@@ -449,18 +439,11 @@ with st.expander("**Major Overhaul Cost**", expanded=False):
 
     c3.markdown(
         f"""
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border:1px solid #dbe2ea;
-            border-radius:6px;
-            padding:6px 8px;
-            background:#f8fafc;
-            font-size:14px;
-        ">
+        <div class="derived-ng-box">
             <span>{c_ng:,}</span>
-            <span style="font-size:11px; color:#64748b;">×{multiplier}</span>
+            <span class="derived-ng-multiplier">
+                ×{multiplier}
+            </span>
         </div>
         """,
         unsafe_allow_html=True
@@ -480,18 +463,11 @@ with st.expander("**Major Overhaul Cost**", expanded=False):
     # Display NG (same UI)
     c3.markdown(
         f"""
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border:1px solid #dbe2ea;
-            border-radius:6px;
-            padding:6px 8px;
-            background:#f8fafc;
-            font-size:14px;
-        ">
+        <div class="derived-ng-box">
             <span>{a_ng:,}</span>
-            <span style="font-size:11px; color:#64748b;">×{multiplier}</span>
+            <span class="derived-ng-multiplier">
+                ×{multiplier}
+            </span>
         </div>
         """,
         unsafe_allow_html=True
@@ -531,18 +507,11 @@ with st.expander("**Downtime Cost**", expanded=False):
 
     c3.markdown(
         f"""
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border:1px solid #dbe2ea;
-            border-radius:6px;
-            padding:6px 8px;
-            background:#f8fafc;
-            font-size:14px;
-        ">
-            <span>{d_ng}</span>
-            <span style="font-size:11px; color:#64748b;">×{multiplier}</span>
+        <div class="derived-ng-box">
+            <span>{d_ng:,}</span>
+            <span class="derived-ng-multiplier">
+                ×{multiplier}
+            </span>
         </div>
         """,
         unsafe_allow_html=True
@@ -580,18 +549,11 @@ with st.expander("**Breakdown Repair Cost**", expanded=False):
     # Display NG (not input)
     c3.markdown(
         f"""
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border:1px solid #dbe2ea;
-            border-radius:6px;
-            padding:6px 8px;
-            background:#f8fafc;
-            font-size:14px;
-        ">
+        <div class="derived-ng-box">
             <span>{b_ng:,}</span>
-            <span style="font-size:11px; color:#64748b;">×{multiplier}</span>
+            <span class="derived-ng-multiplier">
+                ×{multiplier}
+            </span>
         </div>
         """,
         unsafe_allow_html=True
@@ -626,18 +588,11 @@ with st.expander("**Machine Replacement Cost**", expanded=False):
     # Display NG (not input)
     c3.markdown(
         f"""
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border:1px solid #dbe2ea;
-            border-radius:6px;
-            padding:6px 8px;
-            background:#f8fafc;
-            font-size:14px;
-        ">
+        <div class="derived-ng-box">
             <span>{rep_cost_ng:,}</span>
-            <span style="font-size:11px; color:#64748b;">×{multiplier}</span>
+            <span class="derived-ng-multiplier">
+                ×{multiplier}
+            </span>
         </div>
         """,
         unsafe_allow_html=True
@@ -674,11 +629,8 @@ if st.session_state.get("calculated", False):
 
     div[data-testid="stVerticalBlockBorderWrapper"]:has(.result-hook) > div {
 
-        background: linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #f8fbff 100%
-        ) !important;
+        background: rgba(255,255,255,0.05) !important;
+        backdrop-filter: blur(10px);
 
         padding: 28px !important;
 
@@ -834,17 +786,17 @@ if st.session_state.get("calculated", False):
                 hole=0.70,
                 sort=False,
                 hoverinfo='label+percent+value',
-                marker=dict(colors = [
+                marker=dict(
+                    colors=[
                         "#000000",
-                        [
                         "#1f2937",
                         "#d84b4b",
                         "#ef4444",
                         "#f59e0b",
                         "#10b981",
                         "#6b7280"
-                        ]
-                        ]),
+                    ]
+                ),
                 textinfo='none' 
             )])
 
@@ -890,17 +842,17 @@ if st.session_state.get("calculated", False):
         st.markdown(
             """
             <div style='text-align:center; font-size:12px;'>
-            <span style='color:#4E79A7;'>●</span> Fuel &nbsp;&nbsp;
-            <span style='color:#F28E2B;'>●</span> Maintenance &nbsp;&nbsp;
-            <span style='color:#E15759;'>●</span> O/H &nbsp;&nbsp;
-            <span style='color:#76B7B2;'>●</span> Downtime &nbsp;&nbsp;
-            <span style='color:#59A14F;'>●</span> Breakdown &nbsp;&nbsp;
-            <span style='color:#EDC948;'>●</span> Replacement &nbsp;&nbsp;
             <span style='color:#000000;'>●</span> Investment &nbsp;&nbsp;
+            <span style='color:#1f2937;'>●</span> Fuel &nbsp;&nbsp;
+            <span style='color:#d84b4b;'>●</span> Maintenance &nbsp;&nbsp;
+            <span style='color:#ef4444;'>●</span> O/H &nbsp;&nbsp;
+            <span style='color:#f59e0b;'>●</span> Downtime &nbsp;&nbsp;
+            <span style='color:#10b981;'>●</span> Breakdown &nbsp;&nbsp;
+            <span style='color:#6b7280;'>●</span> Replacement
             </div>
             """,
             unsafe_allow_html=True
-    )
+        )
         
         st.markdown("##### 📊 Savings Contribution by Category")
 
@@ -955,8 +907,7 @@ if st.session_state.get("calculated", False):
             ),
 
             font=dict(
-                size=13,
-                color="#0f172a"
+                size=13
             )
         )
         st.plotly_chart(fig, width="stretch")
