@@ -25,7 +25,16 @@ section[data-testid="stSidebar"]{
 st.markdown("""
 
 <style>
+:root{
+    --text-color:#0f172a;
+}
 
+@media (prefers-color-scheme: dark){
+
+    :root{
+        --text-color:#f8fafc;
+    }
+}
 /* ===== APP BACKGROUND ===== */
 .stApp{
 
@@ -113,6 +122,8 @@ header{
     max-width:620px;
 
     margin-bottom:16px;
+
+    color:var(--text-color);
 }
 
 .hero-title span{
@@ -145,7 +156,7 @@ header{
 
     font-weight:750;
 
-    color:#1f2937;
+    color:var(--text-color);
 
     margin-top:0px;
 
@@ -263,7 +274,7 @@ header{
 
     line-height:1.2;
 
-    color:#0f172a;
+    color:var(--text-color);
 
     margin-bottom:14px;
 }
@@ -279,7 +290,9 @@ header{
 
     line-height:1.8;
 
-    color:#64748b;
+    color:inherit;
+    
+    opacity:0.75;
 
     margin-bottom:24px;
 }
