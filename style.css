@@ -50,7 +50,7 @@ header[data-testid="stHeader"] {
 
     background-size:58%;
 
-    opacity:0.035;
+    opacity:0.04;
 
     pointer-events:none;
 
@@ -413,7 +413,7 @@ div[data-testid="stMetric"] {
 }
 
 div[data-testid="stMetric"]:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow:
         0 10px 24px rgba(15, 23, 42, 0.08);
 }
@@ -833,53 +833,7 @@ div[data-testid="stPlotlyChart"] > div {
 
     border: 1px solid #e2e8f0;
 }
-/* ================= DERIVED COST BOX ================= */
 
-.derived-cost-box {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    height: 28px;
-
-    padding: 0 10px;
-
-    border-radius: 8px;
-
-    border: 1px solid #e2e8f0;
-
-    background: linear-gradient(
-        135deg,
-        #f8fafc 0%,
-        #f1f5f9 100%
-    );
-
-    font-size: 13px;
-
-    color: #0f172a;
-
-    font-weight: 600;
-}
-
-.derived-cost-multiplier {
-
-    font-size: 10px;
-
-    color: #64748b;
-
-    font-weight: 600;
-
-    background: #ffffff;
-
-    padding: 2px 6px;
-
-    border-radius: 999px;
-
-    border: 1px solid #e2e8f0;
-}
 /* ================= RESULTS SECTION TITLE ================= */
 
 .results-section-title {
@@ -918,26 +872,7 @@ div[data-testid="stPlotlyChart"] > div {
 
     display: inline-block;
 }
-/* ================= NEGATIVE SAVINGS ================= */
 
-.saving-negative {
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    color: #b91c1c;
-
-    background: #fef2f2;
-
-    border: 1px solid #fecaca;
-
-    padding: 5px 10px;
-
-    border-radius: 8px;
-
-    display: inline-block;
-}
 /* ================= FINAL TCO ROW ================= */
 
 .tco-final-label {
@@ -1034,18 +969,6 @@ label, div[data-testid="stWidgetLabel"] {
     color: #334155 !important;
 }
 
-/* INPUT HEIGHT */
-
-div[data-testid="stNumberInput"] input,
-div[data-testid="stSelectbox"] > div {
-
-    height: 34px !important;
-
-    font-size: 13px !important;
-
-    border-radius: 8px !important;
-}
-
 /* SLIDER */
 
 .stSlider {
@@ -1107,17 +1030,17 @@ div[data-testid="stSelectbox"] > div {
 /* ================= VERTICAL DIVIDER ================= */
 
 .vertical-divider {
-    width: 2px;
-    height: 100%;
-    min-height: 1200px;
+
+    width:1px;
+    height:100%;
+    min-height:1200px;
     background:
         linear-gradient(
             180deg,
             transparent,
-            #dbe2ea,
+            rgba(216,75,75,0.25),
             transparent
         );
-    margin: auto;
 }
 .metric-card{
 
@@ -1158,4 +1081,8 @@ div[data-testid="stSelectbox"] > div {
     font-size:11px;
 
     color:inherit;
+}
+div[data-testid="stProgressBar"] > div > div {
+
+    background:#d84b4b !important;
 }

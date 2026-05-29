@@ -32,7 +32,7 @@ st.markdown("""
 .metric-card {
 
     background:
-        rgba(255,255,255,0.28);
+        rgba(255,255,255,0.18);
 
     border:
         1px solid rgba(255,255,255,0.28);
@@ -57,7 +57,7 @@ st.markdown("""
 .metric-card:hover {
 
     transform:
-        translateY(-2px);
+        translateY(-1px);
 
     box-shadow:
         0 14px 28px rgba(15,23,42,0.12);
@@ -238,9 +238,13 @@ with left_panel:
 investment = price * qty
 
 # Earnings
-total_rent = monthly_rent * months
-roi_actual = (total_rent/price *100) if price else 0
-roi_annual = ((total_rent / price) * (12/months)*100) if price else 0
+total_rent = monthly_rent * qty * months
+roi_actual = (total_rent / investment * 100) if investment else 0
+roi_annual = (
+    (total_rent / investment)
+    * (12/months)
+    * 100
+) if investment else 0
 payback_months = round(price / monthly_rent, 1) if monthly_rent else 0
 
 # Fuel
@@ -265,7 +269,7 @@ else:
     msg = "1500 hrs Kit Savings"
 
 # Final
-final_cost = adjusted_fuel - maintenance
+final_cost = max(0, adjusted_fuel - maintenance)
 total_savings = fuel_saving + maintenance
 with right_panel:
 # ================= UI =================
