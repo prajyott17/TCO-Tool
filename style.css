@@ -128,18 +128,18 @@ h1, h2, h3 {
     padding-bottom: 3px;
     border-bottom: 1px solid #e5e7eb;
     font-weight: 600;
-    color: #1e293b;
+    color: inherit;
 }
 
 label, div[data-testid="stWidgetLabel"] {
     margin: 0px !important;
     font-size: 13px !important;
-    color: #64748b;
+    color: inherit;
 }
 
 p {
     font-size: 13px;
-    color: #475569;
+    color: inherit;
     margin: 2px 0px !important;
 }
 
@@ -156,7 +156,7 @@ div[data-testid="stNumberInput"] input {
 
     background: #f8fafc !important;
 
-    color: #111827 !important;
+    color: inherit !important;
 
     font-size: 14px !important;
 
@@ -217,7 +217,7 @@ div[data-testid="stSelectbox"] div[data-baseweb="select"] {
 
 div[data-testid="stSelectbox"] span {
 
-    color:#111827 !important;
+    color:inherit !important;
 
     font-size:13px !important;
 
@@ -249,7 +249,7 @@ div[role="option"] {
 
     background: transparent !important;
 
-    color:#111827 !important;
+    color: inherit !important;
 
     font-size:13px !important;
 }
@@ -367,14 +367,14 @@ section[data-testid="stSidebar"] .stSlider {
 div[data-testid="stMetric"] label[data-testid="stMetricLabel"] p {
     font-size: 18px !important;
     font-weight: 600 !important;
-    color: #111827 !important;
+    color: inherit !important;
     line-height: 1.2 !important;
 }
 /* ================= METRIC VALUE ================= */
 div[data-testid="stMetricValue"] {
     font-size: 34px !important;
     font-weight: 700 !important;
-    color: #111827 !important;
+    color: inherit !important;
 }
 
 /* ================= RESULTS SECTION ================= */
@@ -422,7 +422,7 @@ div[data-testid="stMetric"]:hover {
 div[data-testid="stMetric"] label[data-testid="stMetricLabel"] p {
     font-size: 18px !important;
     font-weight: 800 !important;
-    color: #0f172a !important;
+    color: inherit !important;
 }
 
 /* KPI VALUE */
@@ -607,7 +607,7 @@ details[open] summary {
 
     font-size: 13px;
 
-    color: #0f172a;
+    color: inherit;
 
     font-weight: 500;
 }
@@ -616,7 +616,7 @@ details[open] summary {
 
     font-size: 9px;
 
-    color: #64748b;
+    color: inherit;
 
     font-weight: 600;
 }
@@ -668,14 +668,14 @@ details[open] > div {
 .hero-saving-label {
     font-size: 13px;
     font-weight: 600;
-    color: #475569;
+    color: inherit;
     margin-bottom: 4px;
 }
 
 .hero-saving-value {
     font-size: 28px;
     font-weight: 650;
-    color: #111827;
+    color: inherit;
     line-height: 1.1;
 }
 
@@ -692,7 +692,7 @@ details[open] > div {
 
     font-size: 15px;
     font-weight: 700;
-    color: #0f172a;
+    color: inherit;
     margin-top: 6px;
     margin-bottom: 8px;
 }
@@ -704,7 +704,7 @@ details[open] > div {
 
     font-weight: 600;
 
-    color: #0f172a;
+    color: inherit;
 
     padding: 6px 10px;
 
@@ -842,7 +842,7 @@ div[data-testid="stPlotlyChart"] > div {
 
     font-weight: 700;
 
-    color: #0f172a;
+    color: inherit;
 
     margin-top: 14px;
 
@@ -881,7 +881,7 @@ div[data-testid="stPlotlyChart"] > div {
 
     font-weight: 700;
 
-    color: #0f172a;
+    color: inherit;
 
     padding-top: 2px;
 }
@@ -1085,4 +1085,54 @@ div[data-testid="stSelectbox"] > div {
 div[data-testid="stProgressBar"] > div > div {
 
     background:#d84b4b !important;
+}
+/* ================= DARK MODE FIX ================= */
+
+@media (prefers-color-scheme: dark) {
+
+    h1,h2,h3,h4,h5,h6,
+    p,
+    label,
+    span {
+
+        color: inherit !important;
+    }
+
+    .results-title,
+    .results-section-title,
+    .saving-label,
+    .tco-final-label,
+    .mini-section-title {
+
+        color: inherit !important;
+    }
+
+    div[data-testid="stMetricValue"] {
+
+        color: inherit !important;
+    }
+
+    div[data-testid="stMetricLabel"] p {
+
+        color: inherit !important;
+    }
+
+    .hero-saving-value,
+    .hero-saving-label {
+
+        color: inherit !important;
+    }
+}
+@media (prefers-color-scheme: dark) {
+
+    .page-card,
+    .results-shell,
+    .results-wrapper {
+
+        background:
+            rgba(30,41,59,0.55) !important;
+
+        border:
+            1px solid rgba(255,255,255,0.08) !important;
+    }
 }
