@@ -170,7 +170,7 @@ div[data-testid="stNumberInput"] button {
 div[data-testid="stSelectbox"] > div {
 
     background:
-        rgba(255,255,255,0.38) !important;
+        rgba(255,255,255,0.8) !important;
 
     backdrop-filter:
         blur(10px);
@@ -758,7 +758,7 @@ div[data-testid="stPlotlyChart"] > div {
     border-radius:20px;
 
     background:
-        rgba(255,255,255,0.72);
+        rgba(255,255,255,0.8);
 
     border:
         1px solid #d1d5db;
@@ -991,7 +991,7 @@ div[data-testid="stSelectbox"] > div {
 .page-card {
 
     background:
-        rgba(255,255,255,0.68);
+        rgba(255,255,255,0.8);
 
     backdrop-filter:
         blur(12px);
@@ -1065,38 +1065,4 @@ div[data-testid="stSelectbox"] > div {
 div[data-testid="stProgressBar"] > div > div {
 
     background:#d84b4b !important;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .page-card,
-    .results-shell,
-    .results-wrapper {
-
-        background:
-            rgba(30,41,59,0.72) !important;
-
-        backdrop-filter:
-            blur(12px);
-
-        border:
-            1px solid rgba(255,255,255,0.08) !important;
-    }
-}
-@media (prefers-color-scheme: dark) {
-
-    div[data-testid="stSelectbox"] > div {
-
-        background:
-            rgba(30,41,59,0.55) !important;
-
-        border:
-            1px solid rgba(255,255,255,0.08) !important;
-    }
-
-    div[role="listbox"] {
-
-        background:
-            rgba(30,41,59,0.85) !important;
-    }
 }
