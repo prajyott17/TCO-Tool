@@ -25,7 +25,7 @@ load_css()
 st.markdown("""
 <style>
 :root{
-    --text-color: inherit;
+    --text-color:#111827;
 }
 
 section[data-testid="stSidebar"]{
@@ -798,22 +798,50 @@ if st.session_state.get("calculated", False):
                 ),
                 textinfo='none' 
             )])
+            fig.update_traces(
+                textfont=dict(
+                    color="#111827",
+                    size=12
+                )
+            )
 
             fig.update_layout(
+                template="plotly_white",
                 height=250,
-                margin=dict(t=15, b=5, l=5, r=5),
+                margin=dict(
+                    t=15,
+                    b=5,
+                    l=5,
+                    r=5
+                ),
                 showlegend=False,
                 paper_bgcolor="rgba(0,0,0,0)",
                 plot_bgcolor="rgba(0,0,0,0)",
+                font=dict(
+                    color="#111827",
+                    size=12
+                ),
                 autosize=True,
                 annotations=[
                     dict(
                         text=f"{title}<br><b>{symbol} {total*rate:,.0f}</b>",
-                        x=0.5, y=0.5,
-                        font_size=14,
+                        x=0.5,
+                        y=0.5,
+
+                        font=dict(
+                            color="#111827",
+                            size=14
+                        ),
+
                         showarrow=False
                     )
                 ]
+            )
+            fig.update_traces(
+                textfont=dict(
+                    color="#111827",
+                    size=12
+                )
             )
             return fig
         total_g = sum(values_g)
