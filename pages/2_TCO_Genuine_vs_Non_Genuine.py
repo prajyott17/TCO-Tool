@@ -118,10 +118,22 @@ def row(label, v1, v2, v3, k1, k2, k3, disable_g=False, disable_ng=False):
 
 def total_row(label, v1, v2, v3):
     c1, c2, c3, c4 = st.columns(COLS)
-    c1.markdown(f"**{label}**")
-    c2.markdown(f"{symbol} {v1*rate:,.0f}")
-    c3.markdown(f"{symbol} {v2*rate:,.0f}")
-    c4.markdown(f"{symbol} {v3*rate:,.0f}")
+    c1.markdown(
+        f"<div class='section-total-label'>{label}</div>",
+        unsafe_allow_html=True
+    )
+    c2.markdown(
+        f"<div class='section-total-value'>{symbol} {v1*rate:,.0f}</div>",
+        unsafe_allow_html=True
+    )
+    c3.markdown(
+        f"<div class='section-total-value'>{symbol} {v2*rate:,.0f}</div>",
+        unsafe_allow_html=True
+    )
+    c4.markdown(
+        f"<div class='section-total-value'>{symbol} {v3*rate:,.0f}</div>",
+        unsafe_allow_html=True
+    )
 
 def highlight_total_row(label, v1, v2, v3):
 
