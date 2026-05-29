@@ -628,7 +628,7 @@ if st.session_state.get("calculated", False):
 
     div[data-testid="stVerticalBlockBorderWrapper"]:has(.result-hook) > div {
 
-        background: rgba(255,255,255,0.05) !important;
+        background: rgba(255,255,255,0.85) !important;
         backdrop-filter: blur(10px);
 
         padding: 28px !important;
@@ -804,6 +804,9 @@ if st.session_state.get("calculated", False):
                     size=12
                 )
             )
+            fig.update_yaxes(
+                color="#111827"
+            )
 
             fig.update_layout(
                 template="plotly_white",
@@ -962,6 +965,12 @@ if st.session_state.get("calculated", False):
 
         fig.update_yaxes(
             color="#111827"
+        )
+        fig.update_traces(
+            textfont=dict(
+                color="#111827",
+                size=12
+            )
         )
         st.plotly_chart(fig, width="stretch")
         st.markdown("---")
