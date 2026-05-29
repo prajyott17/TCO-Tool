@@ -81,26 +81,6 @@ section {
 }
 /* ===== PAGE SECTIONS ===== */
 
-.page-card{
-
-    background:
-        rgba(255,255,255,0.96);
-
-    border:
-        1px solid #d1d5db;
-
-    border-radius:18px;
-
-    padding:14px;
-
-    box-shadow:
-        0 6px 18px rgba(15,23,42,0.08);
-
-    margin-bottom:14px;
-}
-
-
-
 .element-container {
     margin: 0px !important;
     padding: 0px !important;
@@ -432,7 +412,7 @@ div[data-testid="stMetricValue"] {
 
     font-weight: 700 !important;
 
-    color: #111827 !important;
+    color: inherit !important;
 
     line-height: 1.1 !important;
 }
@@ -460,7 +440,7 @@ div[data-testid="stCaptionContainer"] {
 div[data-testid="stCaptionContainer"] p {
     line-height: 1 !important;
     font-size: 11px !important;
-    color: #475569 !important;
+    color: inherit !important;
 }
 
 @media print {
@@ -561,7 +541,7 @@ details summary {
     padding: 0.20rem 0.5rem !important;
     font-size: 13px !important;
     font-weight: 600 !important;
-    color: #0f172a !important;
+    color: inherit !important;
     background: #f8fafc !important;
     border-radius: 14px !important;
     transition: all 0.1s ease;
@@ -640,7 +620,7 @@ details[open] > div {
 
     font-weight: 700;
 
-    color: #0f172a;
+    color: inherit;
 
     padding-bottom: 8px;
 
@@ -812,7 +792,7 @@ div[data-testid="stPlotlyChart"] > div {
 
     font-size: 13px;
 
-    color: #0f172a;
+    color: inherit;
 
     font-weight: 600;
 }
@@ -966,7 +946,7 @@ label, div[data-testid="stWidgetLabel"] {
 
     font-weight: 600 !important;
 
-    color: #334155 !important;
+    color: inherit !important;
 }
 
 /* SLIDER */
@@ -1130,9 +1110,29 @@ div[data-testid="stProgressBar"] > div > div {
     .results-wrapper {
 
         background:
+            rgba(30,41,59,0.72) !important;
+
+        backdrop-filter:
+            blur(12px);
+
+        border:
+            1px solid rgba(255,255,255,0.08) !important;
+    }
+}
+@media (prefers-color-scheme: dark) {
+
+    div[data-testid="stSelectbox"] > div {
+
+        background:
             rgba(30,41,59,0.55) !important;
 
         border:
             1px solid rgba(255,255,255,0.08) !important;
+    }
+
+    div[role="listbox"] {
+
+        background:
+            rgba(30,41,59,0.85) !important;
     }
 }
