@@ -373,7 +373,6 @@ with st.expander("**Fuel Cost**", expanded=False):
         f"""
         <div class="derived-ng-box">
             <span>{round(fc_ng, 2)}</span>
-
             <span class="derived-ng-multiplier">
                 ↑{(fc_multiplier - 1)*100:.1f}%
             </span>

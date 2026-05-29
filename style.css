@@ -1051,30 +1051,27 @@ div[data-testid="stSelectbox"] > div {
 
     align-items:center;
 
-    border-left:4px solid #d84b4b;
+    border:1px solid #e5e7eb;
 
-    border-top:1px solid rgba(216,75,75,0.15);
-
-    border-right:1px solid rgba(216,75,75,0.15);
-
-    border-bottom:1px solid rgba(216,75,75,0.15);
-
-    border-radius:6px;
+    border-radius:8px;
 
     padding:6px 8px;
 
-    background:rgba(255,255,255,0.02);
-
-    backdrop-filter:blur(4px);
+    background:#ffffff;
 
     font-size:14px;
+
+    box-shadow:
+        0 1px 4px rgba(0,0,0,0.04);
 }
 
 .derived-ng-multiplier {
 
-    font-size:11px;
+    color:#d84b4b;
 
-    color:inherit;
+    font-weight:700;
+
+    font-size:11px;
 }
 div[data-testid="stProgressBar"] > div > div {
 
