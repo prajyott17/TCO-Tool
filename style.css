@@ -599,7 +599,7 @@ details[open] summary {
         #f1f5f9 100%
     );
 
-    font-size: 14px;
+    font-size: 13px;
 
     color: inherit;
 
@@ -804,7 +804,7 @@ div[data-testid="stPlotlyChart"] > div {
         #f1f5f9 100%
     );
 
-    font-size: 14px;
+    font-size: 13px;
 
     color: inherit;
 
@@ -1061,7 +1061,7 @@ div[data-testid="stSelectbox"] > div {
 
     background:#ffffff;
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:400;
 }
