@@ -1066,43 +1066,7 @@ div[data-testid="stProgressBar"] > div > div {
 
     background:#d84b4b !important;
 }
-/* ================= DARK MODE FIX ================= */
 
-@media (prefers-color-scheme: dark) {
-
-    h1,h2,h3,h4,h5,h6,
-    p,
-    label,
-    span {
-
-        color: inherit !important;
-    }
-
-    .results-title,
-    .results-section-title,
-    .saving-label,
-    .tco-final-label,
-    .mini-section-title {
-
-        color: inherit !important;
-    }
-
-    div[data-testid="stMetricValue"] {
-
-        color: inherit !important;
-    }
-
-    div[data-testid="stMetricLabel"] p {
-
-        color: inherit !important;
-    }
-
-    .hero-saving-value,
-    .hero-saving-label {
-
-        color: inherit !important;
-    }
-}
 @media (prefers-color-scheme: dark) {
 
     .page-card,
