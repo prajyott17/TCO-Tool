@@ -240,11 +240,14 @@ div[role="option"] {
 
     background: transparent !important;
 
-    color: inherit !important;
+    color: #111827 !important;
 
     font-size:13px !important;
 }
+div[data-baseweb="select"] * {
 
+    color:#111827 !important;
+}
 /* OPTION HOVER */
 
 div[role="option"]:hover {
@@ -631,7 +634,7 @@ details[open] > div {
 
     font-weight: 700;
 
-    color: inherit;
+    color:#111827;
 
     padding-bottom: 8px;
 
@@ -666,7 +669,7 @@ details[open] > div {
 .hero-saving-value {
     font-size: 28px;
     font-weight: 650;
-    color: inherit;
+    color:#111827;
     line-height: 1.1;
 }
 
@@ -833,7 +836,7 @@ div[data-testid="stPlotlyChart"] > div {
 
     font-weight: 700;
 
-    color: inherit;
+    color:#111827;
 
     margin-top: 14px;
 
@@ -957,7 +960,7 @@ label, div[data-testid="stWidgetLabel"] {
 
     font-weight: 600 !important;
 
-    color: inherit !important;
+    color: #475569 !important;
 }
 
 /* SLIDER */
@@ -1076,4 +1079,12 @@ div[data-testid="stSelectbox"] > div {
 div[data-testid="stProgressBar"] > div > div {
 
     background:#d84b4b !important;
+}
+input,
+textarea,
+select {
+
+    color:#111827 !important;
+
+    -webkit-text-fill-color:#111827 !important;
 }
