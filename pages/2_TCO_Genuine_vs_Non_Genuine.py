@@ -909,6 +909,32 @@ if st.session_state.get("calculated", False):
                 size=13
             )
         )
+        fig.update_layout(
+
+            template="plotly_white",
+
+            font=dict(
+                color="#111827"
+            ),
+
+            title_font=dict(
+                color="#111827"
+            ),
+
+            legend=dict(
+                font=dict(
+                    color="#111827"
+                )
+            )
+        )
+
+        fig.update_xaxes(
+            color="#111827"
+        )
+
+        fig.update_yaxes(
+            color="#111827"
+        )
         st.plotly_chart(fig, width="stretch")
         st.markdown("---")
 
