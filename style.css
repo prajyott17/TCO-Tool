@@ -1061,18 +1061,18 @@ div[data-testid="stSelectbox"] > div {
 
     background:#ffffff;
 
-    font-size:13px;
+    font-size:12px;
 
-    font-weight:300;
+    font-weight:400;
 }
 
 .derived-ng-multiplier {
 
     color:#d84b4b;
 
-    font-size:13px;
+    font-size:12px;
 
-    font-weight:400;
+    font-weight:600;
 }
 div[data-testid="stProgressBar"] > div > div {
 
