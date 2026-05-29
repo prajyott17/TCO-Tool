@@ -1,3 +1,9 @@
+html,
+body,
+.stApp {
+
+    color:#111827 !important;
+}
 :root{
 
     --brand-red:#d84b4b;
@@ -108,18 +114,18 @@ h1, h2, h3 {
     padding-bottom: 3px;
     border-bottom: 1px solid #e5e7eb;
     font-weight: 600;
-    color: inherit;
+    color:#111827;
 }
 
 label, div[data-testid="stWidgetLabel"] {
     margin: 0px !important;
     font-size: 13px !important;
-    color: inherit;
+    color:#475569;
 }
 
 p {
     font-size: 13px;
-    color: inherit;
+    color:#475569;
     margin: 2px 0px !important;
 }
 

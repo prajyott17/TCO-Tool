@@ -114,7 +114,7 @@ header{
 
     margin-bottom:16px;
 
-    color:inherit;
+    color:#111827;
 }
 
 .hero-title span{
@@ -147,7 +147,7 @@ header{
 
     font-weight:750;
 
-    color:inherit;
+    color:#111827;
 
     margin-top:0px;
 
@@ -265,7 +265,7 @@ header{
 
     line-height:1.2;
 
-    color:inherit;
+    color:#111827;
 
     margin-bottom:14px;
 }
@@ -281,7 +281,7 @@ header{
 
     line-height:1.8;
 
-    color:inherit;
+    color:#64748b;
     
     opacity:0.75;
 
