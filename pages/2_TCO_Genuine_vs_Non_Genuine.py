@@ -804,9 +804,6 @@ if st.session_state.get("calculated", False):
                     size=12
                 )
             )
-            fig.update_yaxes(
-                color="#111827"
-            )
 
             fig.update_layout(
                 template="plotly_white",
@@ -960,11 +957,25 @@ if st.session_state.get("calculated", False):
         )
 
         fig.update_xaxes(
-            color="#111827"
+            color="#111827",
+            showline=True,
+            linewidth=1,
+            linecolor="#64748b",
+            tickfont=dict(
+                color="#111827",
+                size=12
+            )
         )
 
         fig.update_yaxes(
-            color="#111827"
+            color="#111827",
+            showline=True,
+            linewidth=1,
+            linecolor="#64748b",
+            tickfont=dict(
+                color="#111827",
+                size=12
+            )
         )
         fig.update_traces(
             textfont=dict(

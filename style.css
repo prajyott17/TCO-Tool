@@ -1051,27 +1051,28 @@ div[data-testid="stSelectbox"] > div {
 
     align-items:center;
 
+    min-height:38px;
+
+    padding:0 12px;
+
     border:1px solid #e5e7eb;
 
     border-radius:8px;
 
-    padding:6px 8px;
-
     background:#ffffff;
 
-    font-size:14px;
+    font-size:16px;
 
-    box-shadow:
-        0 1px 4px rgba(0,0,0,0.04);
+    font-weight:400;
 }
 
 .derived-ng-multiplier {
 
     color:#d84b4b;
 
-    font-weight:700;
+    font-size:13px;
 
-    font-size:11px;
+    font-weight:600;
 }
 div[data-testid="stProgressBar"] > div > div {
 
