@@ -34,21 +34,19 @@ def top_nav(current_page):
 
     st.markdown("""
     <style>
-
     .nav-container{
 
         display:flex;
 
         align-items:center;
 
-        border-bottom:
-            1px solid #dbe2ea;
+        gap:30px;
 
-        margin-top:5px;
+        border-bottom:1px solid #e5e7eb;
 
-        margin-bottom:22px;
+        padding-bottom:12px;
 
-        padding-bottom:10px;
+        margin-bottom:30px;
     }
 
     .tabs{
@@ -60,25 +58,21 @@ def top_nav(current_page):
 
     .tab{
 
-        padding:10px 18px;
-
-        border-radius:12px;
+        padding:14px 20px;
 
         text-decoration:none;
 
-        font-size:14px;
+        font-size:15px;
 
         font-weight:600;
 
-        color:#475569;
+        color:#374151;
 
-        transition:0.2s ease;
+        background:none;
 
-        background:
-            rgba(255,255,255,0.55);
+        border:none;
 
-        border:
-            1px solid rgba(203,213,225,0.55);
+        border-radius:0;
     }
 
     .tab:hover{
@@ -93,19 +87,15 @@ def top_nav(current_page):
 
     .tab.active{
 
-        background:
-            linear-gradient(
-                135deg,
-                #d84b4b,
-                #c43d3d
-            );
+        color:#d84b4b;
 
-        color:white;
+        background:none;
 
-        border:none;
+        border-bottom:3px solid #d84b4b;
 
-        box-shadow:
-            0 8px 18px rgba(216,75,75,0.18);
+        border-radius:0;
+
+        box-shadow:none;
     }
 
     </style>

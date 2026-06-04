@@ -355,78 +355,76 @@ header{
 
 <div class="hero">
 
-<div class="badge">
-Enterprise Analytics Platform
-</div>
-
-<div class="hero-title">
-Smart <span>TCO & Rental</span><br>
-Analytics Platform
-</div>
-
-<div class="hero-sub">
-Centralized platform for lifecycle cost analysis,
-rental profitability evaluation,
-maintenance intelligence,
-and operational optimization.
-</div>
-
-</div>
-
 <div class="section-title">
 Available Tools
 </div>
 
-<div class="grid">
+<div class="tools-section">
 
-<div class="card">
+    <div class="tool-card">
 
-<div class="label">
-Lifecycle Analytics
-</div>
+        <img src="assets/tool_machine.jpg">
 
-<div class="title">
-📊 TCO Genuine vs Non-Genuine Parts
-</div>
+        <h3>TCO Genuine vs Non-Genuine</h3>
 
-<div class="desc">
-Analyze lifecycle ownership cost,
-maintenance quality, downtime exposure,
-and operational efficiency.
-</div>
+        <p>
+        Compare lifecycle ownership costs,
+        downtime exposure and maintenance.
+        </p>
 
-<a class="btn" href="?page=tco_genuine" target="_self">
-Open Tool
-</a>
+        <a href="?page=tco_genuine"
+           target="_self"
+           class="btn">
+           Open Tool
+        </a>
 
-</div>
+    </div>
 
-<div class="card">
+    <div class="tool-card">
 
-<div class="label">
-Rental Intelligence
-</div>
+        <img src="assets/tool_machine.jpg">
 
-<div class="title">
-⛽ Rental Calculator
-</div>
+        <h3>Rental Calculator</h3>
 
-<div class="desc">
-Evaluate rental profitability,
-utilization efficiency,
-and ownership recovery analysis.
-</div>
+        <p>
+        Evaluate profitability,
+        utilization and ROI.
+        </p>
 
-<a class="btn" href="?page=rental" target="_self">
-Open Tool
-</a>
+        <a href="?page=rental"
+           target="_self"
+           class="btn">
+           Open Tool
+        </a>
 
-</div>
+    </div>
+
+    <div class="benefits-card">
+
+        <h3>
+        WHY CHOOSE GENUINE PARTS?
+        </h3>
+
+        ✓ Lower Total Cost<br><br>
+
+        ✓ Higher Uptime<br><br>
+
+        ✓ Longer Machine Life<br><br>
+
+        ✓ Better ROI
+
+    </div>
 
 </div>
 
 <div class="footer">
-Chicago Pneumatic • Internal Business Platform
+
+People. Passion. Performance.
+
+<br><br>
+
+© 2026 Chicago Pneumatic
+
 </div>
 
 """, unsafe_allow_html=True)
