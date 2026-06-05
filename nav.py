@@ -9,7 +9,7 @@ def top_nav(current_page):
     header_col1, header_col2 = st.columns([2, 6])
 
     with header_col1:
-        st.image("assets/chicago-pneumatic.jpg", width=130)
+        st.image("assets/logo.jpg", width=130)
 
     rates = get_rate()
     usd = rates["USD"]
@@ -58,21 +58,13 @@ def top_nav(current_page):
 
     .tab{
 
-        padding:14px 20px;
-
-        text-decoration:none;
+        padding:18px 12px;
 
         font-size:15px;
 
         font-weight:600;
 
-        color:#374151;
-
-        background:none;
-
-        border:none;
-
-        border-radius:0;
+        border-bottom:3px solid transparent;
     }
 
     .tab:hover{
