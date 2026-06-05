@@ -2,14 +2,185 @@ import streamlit as st
 from utils import load_css
 from nav import top_nav
 
-st.set_page_config(page_title="TCO Platform", layout="wide")
+st.set_page_config(
+    page_title="TCO Platform",
+    layout="wide"
+)
+
 load_css()
 top_nav("home")
+
+# ================= HERO =================
+st.markdown("""
+<div class="hero-section">
+
+<div class="hero-small">
+WELCOME TO CHICAGO PNEUMATIC
+</div>
+
+<div class="hero-main">
+Smart Insights. Better Uptime.<br>
+<span class="hero-red">
+Lower Cost.
+</span>
+</div>
+
+<div class="hero-desc">
+Analyze lifecycle costs, compare genuine vs non-genuine parts,
+and optimize rental profitability from a single platform.
+</div>
+
+</div>
+""", unsafe_allow_html=True)
+st.markdown("""
+<div class="hero-buttons">
+
+<a href="?page=tco_genuine"
+target="_self"
+class="hero-btn-red">
+📊 Open TCO Tool
+</a>
+
+<a href="?page=rental"
+target="_self"
+class="hero-btn-outline">
+⛽ Open Rental Calculator
+</a>
+
+</div>
+""", unsafe_allow_html=True)
+# ================= SECTION TITLE =================
 st.markdown(
-    """ <style> section[data-testid="stSidebar"]{ display:none !important; } [data-testid="stSidebarCollapsedControl"]{ display:none !important; } </style> """,
-    unsafe_allow_html=True,
+    '<div class="section-title">OUR TOOLS</div>',
+    unsafe_allow_html=True
 )
+
+# ================= 3 CARDS =================
+
+col1, col2, col3 = st.columns([3.5, 3.5, 3])
+
+# ---------- CARD 1 ----------
+with col1:
+    st.markdown(
+    """
+    <div class="tco-card">
+
+    <div class="label">
+    LIFECYCLE ANALYTICS
+    </div>
+
+    <div class="card-title">
+    📊 TCO Genuine vs Non-Genuine
+    </div>
+
+    <div class="card-desc">
+    Compare Total Cost of Ownership between
+    Genuine and Non-Genuine parts over the
+    machine lifecycle.
+    </div>
+
+    <div class="card-feature">✔ Cost Breakdown Comparison</div>
+    <div class="card-feature">✔ Savings Analysis</div>
+    <div class="card-feature">✔ Detailed Reports</div>
+
+    <div style="height:20px;"></div>
+
+    <a href="?page=tco_genuine"
+    target="_self"
+    class="card-btn">
+    Open TCO Tool →
+    </a>
+
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+# ---------- CARD 2 ----------
+with col2:
+
+    st.markdown(
+    """
+    <div class="rental-card">
+
+    <div class="label">
+    RENTAL INTELLIGENCE
+    </div>
+
+    <div class="card-title">
+    📊 Rental Calculator
+    </div>
+
+    <div class="card-desc">
+    Calculate ownership cost recovery,<br>
+    rental rates, utilization and<br>
+    profitability analysis.
+    </div>
+
+    <div class="card-feature">✔ Break-even Analysis</div>
+    <div class="card-feature">✔ Utilization & Revenue</div>
+    <div class="card-feature">✔ ROI & Payback Period</div>
+
+    <div style="height:20px;"></div>
+
+    <a href="?page=rental"
+    target="_self"
+    class="card-btn rental-btn">
+    Open Rental Calculator →
+    </a>
+
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+# ---------- CARD 3 ----------
+
+with col3:
+
+    st.markdown(
+    """
+    <div class="benefit-card">
+
+    <div class="label">
+    BENEFITS
+    </div>
+
+    <div class="card-title">
+    ⭐ Why Choose Genuine Parts?
+    </div>
+
+    <div class="benefit-item">
+    <strong>💰 Lower Total Cost</strong><br>
+    Reduced maintenance and operating expenses
+    </div>
+
+    <div class="benefit-item">
+    <strong>⏱ Higher Uptime</strong><br>
+    Fewer breakdowns and better availability
+    </div>
+
+    <div class="benefit-item">
+    <strong>⚙️ Longer Machine Life</strong><br>
+    Improved durability and reliability
+    </div>
+
+    <div class="benefit-item">
+    <strong>📈 Better ROI</strong><br>
+    Higher returns over the equipment lifecycle
+    </div>
+
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+# ================= FOOTER =================
+
+st.markdown("<br><br>", unsafe_allow_html=True)
+
 st.markdown(
-    """ <style> /* ===== APP BACKGROUND ===== */ .stApp{ background: linear-gradient( 180deg, #f8fafc 0%, #f1f5f9 100% ); } /* ===== MAIN CONTAINER ===== */ .main .block-container{ max-width:1180px; padding-top:15px; padding-bottom:40px; } /* ===== SIDEBAR ===== */ section[data-testid="stSidebar"]{ background: linear-gradient( 180deg, #ffffff 0%, #f8fbff 100% ); border-right: 1px solid #e2e8f0; } /* ===== HEADER ===== */ header{ background: rgba(255,255,255,0.75) !important; backdrop-filter:blur(12px); } /* ===== HERO ===== */ .hero{ margin-top:10px; margin-bottom:12px; } .badge{ display:inline-block; padding:7px 14px; border-radius:999px; background: rgba(216,75,75,0.10); color:#d84b4b; font-size:12px; font-weight:650; margin-bottom:18px; } .hero-title{ font-size:34px; font-weight:800; line-height:1.15; max-width:620px; margin-bottom:16px; color:#111827; } .hero-title span{ color:#d84b4b; -webkit-text-fill-color:unset; background:none; -webkit-background-clip:text; } .hero-sub{ max-width:760px; font-size:15px; line-height:1.9; color:#64748b; } /* ===== SECTION ===== */ .section-title{ font-size:20px; font-weight:750; color:#111827; margin-top:0px; margin-bottom:14px; } /* ===== GRID ===== */ .grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; } /* ===== CARDS ===== */ .card{ position:relative; overflow:hidden; padding:28px; border-radius:24px; background:#ffffff; border: 1px solid rgba(255,255,255,0.65); box-shadow: 0 4px 14px rgba(15,23,42,0.06); backdrop-filter:blur(14px); border: 1px solid rgba(255,255,255,0.65); box-shadow: 0 10px 30px rgba(15,23,42,0.06); transition:all 0.25s ease; border-top: 3px solid rgba(216,75,75,0.18); } /* glow orb */ .card::after{ content:""; position:absolute; width:140px; height:140px; border-radius:50%; background: rgba(216,75,75,0.08); top:-50px; right:-50px; filter:blur(24px); } .card:hover{ transform: translateY(-4px); box-shadow: 0 16px 32px rgba(216,75,75,0.10); } /* ===== LABEL ===== */ .label{ position:relative; z-index:2; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#d84b4b; margin-bottom:14px; } /* ===== TITLE ===== */ .title{ position:relative; z-index:2; font-size:22px; font-weight:760; line-height:1.2; color:#111827; margin-bottom:14px; } /* ===== DESC ===== */ .desc{ position:relative; z-index:2; font-size:14px; line-height:1.8; color:#64748b; opacity:0.75; margin-bottom:24px; } /* ===== BUTTON ===== */ .btn{ position:relative; z-index:2; display:inline-flex; align-items:center; gap:8px; padding:9px 16px; border-radius:14px; background:#d84b4b; color:white !important; text-decoration:none; font-size:13px; font-weight:700; box-shadow: 0 8px 18px rgba(216,75,75,0.18); transition:all 0.25s ease; } .btn:hover{ background:#c43d3d; transform: translateY(-2px); box-shadow: 0 12px 24px rgba(216,75,75,0.18); } .card:hover::after{ background: rgba(216,75,75,0.12); } /* ===== FOOTER ===== */ .footer{ margin-top:55px; padding-top:18px; border-top: 1px solid rgba(148,163,184,0.18); color:#94a3b8; font-size:12px; } </style> <div class="hero"> <div class="badge"> Enterprise Analytics Platform </div> <div class="hero-title"> Smart <span>TCO & Rental</span><br> Analytics Platform </div> <div class="hero-sub"> Centralized platform for lifecycle cost analysis, rental profitability evaluation, maintenance intelligence, and operational optimization. </div> </div> <div class="section-title"> Available Tools </div> <div class="grid"> <div class="card"> <div class="label"> Lifecycle Analytics </div> <div class="title"> 📊 TCO Genuine vs Non-Genuine Parts </div> <div class="desc"> Analyze lifecycle ownership cost, maintenance quality, downtime exposure, and operational efficiency. </div> <a class="btn" href="?page=tco_genuine" target="_self"> Open Tool </a> </div> <div class="card"> <div class="label"> Rental Intelligence </div> <div class="title"> ⛽ Rental Calculator </div> <div class="desc"> Evaluate rental profitability, utilization efficiency, and ownership recovery analysis. </div> <a class="btn" href="?page=rental" target="_self"> Open Tool </a> </div> </div> <div class="footer"> Chicago Pneumatic • Internal Business Platform </div> """,
-    unsafe_allow_html=True,
+    '''
+    <div class="footer">
+        Chicago Pneumatic • Internal Business Platform
+    </div>
+    ''',
+    unsafe_allow_html=True
 )

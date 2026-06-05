@@ -3,13 +3,9 @@ from utils import get_rate
 from utils import load_css
 from PIL import Image
 
-load_css()
+#load_css()
 
 def top_nav(current_page):
-    header_col1, header_col2 = st.columns([2, 6])
-
-    with header_col1:
-        st.image("assets/logo.jpg", width=130)
 
     rates = get_rate()
     usd = rates["USD"]
@@ -35,18 +31,11 @@ def top_nav(current_page):
     st.markdown("""
     <style>
     .nav-container{
-
         display:flex;
-
         align-items:center;
-
-        gap:30px;
-
+        height:50px;
+        gap:40px;
         border-bottom:1px solid #e5e7eb;
-
-        padding-bottom:12px;
-
-        margin-bottom:30px;
     }
 
     .tabs{
@@ -58,7 +47,7 @@ def top_nav(current_page):
 
     .tab{
 
-        padding:18px 12px;
+        padding:12px 10px;
 
         font-size:15px;
 
@@ -93,10 +82,17 @@ def top_nav(current_page):
     </style>
     """, unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([5,2,1])
+    col_logo, col_nav, col2, col3 = st.columns([1.2, 6, 2, 1])
+    with col_logo:
+        st.markdown("<div style='padding-top:10px'></div>",
+                    unsafe_allow_html=True)
 
+        st.image(
+            "assets/logo.jpg",
+            width=120
+        )
     # ===== Tabs =====
-    with col1:
+    with col_nav:
         st.markdown(f"""
         <div class="nav-container">
             <div class="tabs">
