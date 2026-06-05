@@ -9,7 +9,7 @@ def top_nav(current_page):
     header_col1, header_col2 = st.columns([2, 6])
 
     with header_col1:
-        st.image("assets/logo.jpg", width=130)
+        st.image("assets/hero_bg.avif", width=130)
 
     rates = get_rate()
     usd = rates["USD"]
