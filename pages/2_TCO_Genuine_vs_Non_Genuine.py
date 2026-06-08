@@ -799,13 +799,13 @@ if st.session_state.get("calculated", False):
                 hoverinfo='label+percent+value',
                 marker=dict(
                     colors=[
-                        "#000000",
-                        "#1f2937",
-                        "#d84b4b",
-                        "#ef4444",
-                        "#f59e0b",
-                        "#10b981",
-                        "#6b7280"
+                        "#A8B3C2",  # Investment
+                        "#7C8EA3",  # Fuel (largest slice, muted blue-grey)
+                        "#D6DEE8",  # Maintenance
+                        "#9CB8B3",  # O/H
+                        "#D8CDBA",  # Downtime
+                        "#AFC8B5",  # Breakdown
+                        "#C8CDD6"   # Replacement
                     ]
                 ),
                 textinfo='none' 
@@ -858,36 +858,34 @@ if st.session_state.get("calculated", False):
             return fig
         total_g = sum(values_g)
 
-        chart_colors = ["#4E79A7", "#F28E2B", "#E15759", "#76B7B2", "#59A14F", "#EDC948"]
-
         with col1:
             st.plotly_chart(
                 donut_chart_plotly(values_g, labels, "Genuine", tco_g),
-                width="content",
+                use_container_width=True,
                 config={"displayModeBar": False}
             )
         with col2:
             st.plotly_chart(
                 donut_chart_plotly(values_ng, labels, "Non-Genuine", tco_ng),
-                width="content",
+                use_container_width=True,
                 config={"displayModeBar": False}
             )
         with col3:
             st.plotly_chart(
                 donut_chart_plotly(values_c, labels, "Customer", tco_c),
-                width="content",
+                use_container_width=True,
                 config={"displayModeBar": False}
             )
         st.markdown(
             """
             <div style='text-align:center; font-size:12px;'>
-            <span style='color:#000000;'>●</span> Investment &nbsp;&nbsp;
-            <span style='color:#1f2937;'>●</span> Fuel &nbsp;&nbsp;
-            <span style='color:#d84b4b;'>●</span> Maintenance &nbsp;&nbsp;
-            <span style='color:#ef4444;'>●</span> O/H &nbsp;&nbsp;
-            <span style='color:#f59e0b;'>●</span> Downtime &nbsp;&nbsp;
-            <span style='color:#10b981;'>●</span> Breakdown &nbsp;&nbsp;
-            <span style='color:#6b7280;'>●</span> Replacement
+            <span style='color:#A8B3C2;'>●</span> Investment &nbsp;&nbsp;
+            <span style='color:#7C8EA3;'>●</span> Fuel &nbsp;&nbsp;
+            <span style='color:#D6DEE8;'>●</span> Maintenance &nbsp;&nbsp;
+            <span style='color:#9CB8B3;'>●</span> O/H &nbsp;&nbsp;
+            <span style='color:#D8CDBA;'>●</span> Downtime &nbsp;&nbsp;
+            <span style='color:#AFC8B5;'>●</span> Breakdown &nbsp;&nbsp;
+            <span style='color:#C8CDD6;'>●</span> Replacement
             </div>
             """,
             unsafe_allow_html=True
@@ -902,23 +900,13 @@ if st.session_state.get("calculated", False):
         fig.add_trace(go.Bar(
             x=saving_components,
             y=savings,
-
             text=[f"{symbol} {s*rate:,.0f}" for s in savings],
-
             textposition='outside',
 
-            marker=dict(
-                color=[
-                "#d84b4b",
-                "#10b981",
-                "#f59e0b",
-                "#6b7280"
-                ]
-            ),
+                marker=dict(
+                    color="#A8B3C2"
+                ),
 
-            hovertemplate=
-                "<b>%{x}</b><br>" +
-                f"{symbol} %{y:,.0f}<extra></extra>"
         ))
         fig.update_layout(
 
@@ -957,10 +945,6 @@ if st.session_state.get("calculated", False):
                 color="#111827"
             ),
 
-            title_font=dict(
-                color="#111827"
-            ),
-
             legend=dict(
                 font=dict(
                     color="#111827"
@@ -995,7 +979,11 @@ if st.session_state.get("calculated", False):
                 size=12
             )
         )
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(
+            fig,
+            use_container_width=True,
+            config={"displayModeBar": False}
+        )
         st.markdown("---")
 
         if st.button("📄 Generate PDF Report"):

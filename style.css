@@ -274,49 +274,47 @@ div[data-testid="stSelectbox"] svg {
 /* ================= BUTTON ================= */
 button[kind="secondary"] {
 
-    width: 100%;
+    width:180px;
 
-    height: 42px;
+    height:42px;
 
-    border-radius: 12px;
+    border:none !important;
 
-    background:
-        linear-gradient(
-            135deg,
-            #d84b4b 0%,
-            #c43d3d 100%
-    ) !important;
+    border-radius:12px;
 
-    color: white !important;
+    background:#7C8EA3 !important;
 
-    border: none !important;
+    color:white !important;
 
-    font-size: 14px !important;
+    -webkit-text-fill-color:white !important;
 
-    font-weight: 700 !important;
+    font-size:14px !important;
 
-    letter-spacing: 0.2px;
+    font-weight:700 !important;
+
+    margin:10px auto !important;
+
+    display:block !important;
 
     box-shadow:
-        0 6px 16px rgba(216,75,75, 0.18);
+        0 4px 12px rgba(124,142,163,0.15);
 
-    transition: all 0.2s ease;
+    transition:all 0.2s ease;
 }
 
 button[kind="secondary"]:hover {
 
-    transform: translateY(-1px);
+    background:#6F8197 !important;
+
+    color:white !important;
+
+    -webkit-text-fill-color:white !important;
+
+    transform:translateY(-1px);
 
     box-shadow:
-        0 10px 20px rgba(216,75,75, 0.22);
-
-    background: linear-gradient(
-        135deg,
-        #de5a5a 0%,
-        #c43d3d 100%,
-    ) !important;
+        0 8px 16px rgba(124,142,163,0.20);
 }
-
 /* ================= METRIC ================= */
 div[data-testid="stMetric"] {
     padding: 1px 1px !important;
