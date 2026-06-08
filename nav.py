@@ -26,8 +26,6 @@ def top_nav(current_page):
     elif page == "rental" and current_page != "rental":
         st.switch_page("pages/3_Rental_Calculator.py")
 
-    
-
     st.markdown("""
     <style>
     .nav-container{
