@@ -149,25 +149,31 @@ with col3:
     </div>
 
     <div class="benefit-item">
-    <strong>💰 Lower Total Cost</strong><br>
-    Reduced maintenance and operating expenses
+        <strong>💰Lower Total Cost</strong>
+        <div class="benefit-text">
+            Reduced maintenance and operating expenses
+        </div>
     </div>
 
     <div class="benefit-item">
-    <strong>⏱ Higher Uptime</strong><br>
-    Fewer breakdowns and better availability
+        <strong>⏱  Higher Uptime</strong>
+        <div class="benefit-text">
+            Fewer breakdowns and better availability
+        </div>
     </div>
 
     <div class="benefit-item">
-    <strong>⚙️ Longer Machine Life</strong><br>
-    Improved durability and reliability
+        <strong>⚙️Longer Machine Life</strong>
+        <div class="benefit-text">
+            Improved durability and reliability
+        </div>
     </div>
 
     <div class="benefit-item">
-    <strong>📈 Better ROI</strong><br>
-    Higher returns over the equipment lifecycle
-    </div>
-
+        <strong>📈 Better ROI</strong>
+        <div class="benefit-text">
+            Higher returns over the equipment lifecycle
+        </div>
     </div>
     """,
     unsafe_allow_html=True
