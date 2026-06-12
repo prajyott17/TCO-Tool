@@ -278,7 +278,7 @@ with right_panel:
     <div style='display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;'>
 
     <div style='font-size:27px; font-weight:700;'>
-    ⛽ Rental for Diesel Machine
+    ⛽ Rental Customer
     </div>
     </div>
     """, unsafe_allow_html=True)
